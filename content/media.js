@@ -27,13 +27,15 @@ export const DISCLOSURE = {
 export const roomFilms = [
   {
     id: 'walk',
-    src: '/v/h-tour-d4.mp4', poster: '/v/h-tour-s2.jpg', msrc: '/v/h-tour-m4.mp4', mposter: '/v/h-tour-m5.jpg',
+    src: '/v/h-tour-d5.mp4', poster: '/v/h-tour-s2.jpg', msrc: '/v/h-tour-m6.mp4', mposter: '/v/h-tour-m5.jpg',
     label: 'A slow walk through a warm mid-century home: the arched entry, the living and dining rooms, the stair garden and the bedroom',
     origin: 'unconfirmed', rights: 'unverified',
     notes: 'Source: ROULA HERO VIDEO.mp4 (46s, 1080p60, Nov 2026), sped up 1.15x to 40s at 24fps; phone cut from the studio\'s ' +
       'portrait version, ROULA VIDEO mobile.mp4 (1080x1920, 60fps, 43s). Follows the scroll like every hero film; lib/home-story.js ' +
       'gives it its own stretch of the hero timeline (TOUR). Encoded for scrubbing: a keyframe every 8 frames, no B-frames. ' +
-      'Lighter cuts (Nov 2026): desktop 1280x720 CRF 30 (11MB, VMAF 82), phone 540x960 CRF 27 (8MB). No AI watermark in the source.',
+      'Lighter cuts (Nov 2026): desktop 1280x720 CRF 30 (11MB, VMAF 82), phone 540x960 CRF 27 (8MB). No AI watermark in the source. ' +
+      'd5/m6 (Nov 2026), from compressed/2nd video 16.9 and video 1 - 9.16: a keyframe every 12 frames (seeks still about 3ms), ' +
+      'tune film; same VMAF as d4/m4 (68 / 74 against the 24fps source) in 14% less: 8.9 MB / 8.4 MB.',
   },
   /* The four chapters below (Natural Light, Comfort & Airflow, Considered Materials, Functional Living) use the films supplied
      by the studio (videos folder/hero videos) as sent: same picture, length and direction. The only change is that the Google
@@ -53,10 +55,12 @@ export const roomFilms = [
   },
   {
     id: 'air',
-    src: '/v/h-air-v8.mp4', poster: '/v/h-air-v8.jpg', msrc: '/v/h-air-m8.mp4', mposter: '/v/h-air-m8.jpg',
+    src: '/v/h-air-v9.mp4', poster: '/v/h-air-v8.jpg', msrc: '/v/h-air-m9.mp4', mposter: '/v/h-air-m8.jpg',
     label: 'Sheer curtains sway in the breeze at the open windows of a calm living room',
     origin: 'ai', rights: 'unverified',
-    notes: 'Source: hero videos/Breeze_swaying_curtains_in_livin…_2a518aff.mp4 (2.5s, forward only, as sent); phone cut hero videos mobile/breeze_curtains_mobile.mp4.',
+    notes: 'Desktop: hero videos/Breeze_swaying_curtains_in_room_d8ac59c7.mp4 (10s); phone: hero videos mobile/Breeze_blowing_curtains_in_livin…_8425b850.mp4 (7.9s). ' +
+      'v9/m9 (Nov 2026): Google sparkle (desktop) and Veo mark (phone) blurred with delogo, H.264 CRF 20, a keyframe every 8 frames, no B-frames. ' +
+      'VMAF 93.0 / 93.4 against the source, at or above the v8/m8 cuts they replace, in two-thirds and three-fifths of the size (4.1 MB / 5.1 MB).',
   },
   {
     id: 'green',

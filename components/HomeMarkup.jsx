@@ -13,7 +13,7 @@ const JOURNEY = [
   { src: '/m/journey-inspo.jpg', w: 1447, h: 1087, label: 'The inspo', alt: 'Design visualisation of the dressing wall: a curved wardrobe, a long cream chest and dressing table, a round backlit mirror and floating shelves' },
   { src: '/m/pf/joinery-dressing-wall.jpg', w: 1448, h: 1086, label: 'What we made', alt: 'The finished dressing wall: a curved wardrobe with a bronze inlay, a wave-fronted chest of drawers and a backlit arched mirror' },
 ];
-const JOURNEY_SIZES = '(max-width: 820px) 84vw, min(980px, 66vw)';
+const JOURNEY_SIZES = '(max-width: 600px) 72vw, min(380px, 30vw)';
 
 /* Markup for the home page scroll story. Element ids are used by lib/home-story.js. */
 export default function HomeMarkup() {
@@ -239,7 +239,7 @@ export default function HomeMarkup() {
           </div>
         </section>
 
-        {/* The journey: the three pictures share one frame, held on screen while each fades in over the last (lib/home-story.js) */}
+        {/* The journey: three pictures in one line, held on screen while they come up from left to right (lib/home-story.js) */}
         <section className="jr3" id="journey" aria-label="One room: what we got, the inspiration and what we made">
           <div className="jr3-in">
             {JOURNEY.map((j, i) => (
