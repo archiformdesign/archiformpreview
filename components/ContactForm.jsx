@@ -13,7 +13,7 @@ function validate(d) {
   if (!d.name) e.name = 'Enter your name.';
   if (!d.email) e.email = 'Enter your email address.';
   else if (!emailOk(d.email)) e.email = 'Enter an email address in the format name@example.com.';
-  if (!d.message) e.message = 'Tell us a little about your project.';
+  if (!d.message) e.message = 'Tell us a little about what’s on your mind.';
   return e;
 }
 
@@ -104,7 +104,7 @@ export default function ContactForm() {
           </select>
         </div>
       </div>
-      <div className="field"><label htmlFor="f-msg">About your project</label><textarea id="f-msg" name="message" rows={4} required maxLength={4000} {...fieldProps('message')} />{fieldError('message')}</div>
+      <div className="field"><label htmlFor="f-msg">What&rsquo;s on your mind</label><textarea id="f-msg" name="message" rows={4} required maxLength={4000} {...fieldProps('message')} />{fieldError('message')}</div>
       {/* Spam trap: hidden from people, bots tend to fill it in. */}
       <div className="hp" aria-hidden="true"><label htmlFor="f-company">Company</label><input id="f-company" name="company" tabIndex={-1} autoComplete="off" /></div>
       <div role="alert">{status === 'error' ? <p className="err">{error}</p> : null}</div>

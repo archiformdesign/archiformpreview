@@ -144,9 +144,7 @@ body:has(#loader:not(.gone)) #hdr{visibility:hidden;opacity:0}
    lib/home-story.js sets the mask image when the garden images load */
 .land .hsh{position:absolute;inset:0;scale:1.45 1.3;transform-origin:50% 100%;background:#000;opacity:0;pointer-events:none;-webkit-mask:center/100% 100% no-repeat;mask:center/100% 100% no-repeat}
 .land .sway img{animation:breeze 7s ease-in-out infinite alternate}
-.land .palm img{animation-duration:5.5s}
-.land .pr img{animation-delay:-2.4s}
-/* The old olive's trunk is too heavy to sway like a palm, so it only stirs */
+/* The old olive's trunk is too heavy to sway, so it only stirs */
 .land .olive img{animation-name:stir;animation-duration:9s;animation-delay:-4s}
 /* Mirrored on a wrapper, as GSAP reads a negative CSS scale on the image itself as a vertical flip */
 .land .olive.l span{display:block;transform:scaleX(-1)}

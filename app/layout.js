@@ -13,6 +13,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SvgSprites from '@/components/SvgSprites';
+import ScrollMemory from '@/components/ScrollMemory';
 import { site } from '@/content/site';
 import { services } from '@/content/services';
 import { ogImage } from '@/lib/seo';
@@ -76,6 +77,7 @@ export default function RootLayout({ children }) {
       <body>
         <a className="skip" href="#content">Skip to content</a>
         <SvgSprites />
+        <ScrollMemory />
         <Header />
         <div id="content" tabIndex={-1} />
         {children}

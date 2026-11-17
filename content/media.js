@@ -74,7 +74,7 @@ export const roomFilms = [
   },
 ];
 
-// The featured-project film: she walks through the villa, pauses at the garden window, then sits on the sofa
+// The featured-project film: she stands at the edge of the sea, which dissolves into a sunlit bedroom, then sits on the bed
 export const featureFilm = {
   id: 'feature',
   src: '/v/feature-ocean-v2.mp4', poster: '/v/feature-ocean.jpg', msrc: '/v/feature-ocean-v2-m.mp4',

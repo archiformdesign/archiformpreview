@@ -56,7 +56,7 @@ export async function POST(req) {
   const type = TYPES.includes(body.type) ? body.type : '';
   const message = clip(body.message, 4000);
   if (!name || !emailOk(email) || !message) {
-    return Response.json({ error: 'Add your name, an email address in the format name@example.com and a few words about your project.' }, { status: 400 });
+    return Response.json({ error: 'Add your name, an email address in the format name@example.com and a few words about what’s on your mind.' }, { status: 400 });
   }
 
   const ip = (req.headers.get('x-forwarded-for') || '').split(',')[0].trim() || 'unknown';
