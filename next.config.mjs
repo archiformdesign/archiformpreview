@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // Security advisories: `next build` prompts for an agent-run security upgrade when the installed version is affected
+  experimental: { agentUpgrade: 'security' },
   // Lets a phone on the same Wi-Fi or hotspot (http://192.168.x.x / 172.20.10.x:3000) load the dev server's scripts; dev only.
   allowedDevOrigins: ['192.168.*.*', '172.*.*.*', '10.*.*.*', '*.local'],
   images: {
