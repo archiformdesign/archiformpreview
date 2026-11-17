@@ -160,7 +160,7 @@ export default function HomeMarkup() {
               <article className="card"><div className="ph"><Image src="/m/kitchen-marble.jpg" alt="Kitchen with a full marble backsplash and shelf, oak cabinets and an olive branch in a glass vase" width={809} height={1470} sizes={CARD_SIZES} style={{objectPosition: '50% 40%'}} /></div><h3>Humidity Control</h3><p>Fresh air for a healthier home.</p><ul><li>Natural cross-ventilation and fresh airflow.</li><li>Balanced indoor humidity.</li><li>Dust-minimizing layouts.</li></ul></article>
               <article className="card"><div className="ph"><Image src="/m/bed-sunlight.jpg" alt="Bedroom with late sun falling across the wall, a palm-print headboard and a small lamp on the bedside table" width={720} height={1280} sizes={CARD_SIZES} style={{objectPosition: '50% 55%'}} /></div><h3>Layered Lighting</h3><p>The right light for every moment.</p><ul><li>Bright light for daily tasks.</li><li>Warm light for evening rest.</li><li>Easy dimming with lamps and switches.</li></ul></article>
               <article className="card"><div className="ph"><Image src="/m/acoustic.jpg" alt="Reading corner with a slatted timber wall, felt acoustic pendants and a green velvet armchair" width={1200} height={1600} sizes={CARD_SIZES} style={{objectPosition: '50% 45%'}} /></div><h3>Sound Insulation</h3><p>Acoustic comfort for a quieter home.</p><ul><li>Noise-absorbing rugs and drapes.</li><li>Soft-close doors and drawers.</li><li>Sound-dampening finishes.</li></ul></article>
-              <article className="card"><div className="ph"><Image src="/m/vanity-clean.webp" alt="Design visualisation of a sculpted dressing wall with built-in shelves and a backlit mirror" width={1447} height={1087} sizes={CARD_SIZES} style={{objectPosition: '40% 50%'}} /></div><h3>Considered Storage</h3><p>Effortless organization for calm spaces.</p><ul><li>Tailored daily storage.</li><li>Seamless built-in cabinets.</li><li>Open, clutter-free layouts.</li></ul></article>
+              <article className="card"><div className="ph"><Image src="/m/pf/joinery-dressing-wall.jpg" alt="The finished dressing wall: a curved wardrobe with a bronze inlay beside a wave-fronted chest of drawers" width={1448} height={1086} sizes={CARD_SIZES} style={{objectPosition: '20% 50%'}} /></div><h3>Considered Storage</h3><p>Effortless organization for calm spaces.</p><ul><li>Tailored daily storage.</li><li>Seamless built-in cabinets.</li><li>Open, clutter-free layouts.</li></ul></article>
             </div>
           </div>
         </section>
@@ -240,7 +240,8 @@ export default function HomeMarkup() {
         </section>
 
         {/* The journey: three pictures in one line, held on screen while they come up from left to right (lib/home-story.js) */}
-        <section className="jr3" id="journey" aria-label="One room: what we got, the inspiration and what we made">
+        <section className="jr3" id="journey" aria-labelledby="jrTitle">
+          <h2 className="h2 jr3-h" id="jrTitle">The <em>Transformation.</em></h2>
           <div className="jr3-in">
             {JOURNEY.map((j, i) => (
               <figure className="jr3-f" key={j.src}>

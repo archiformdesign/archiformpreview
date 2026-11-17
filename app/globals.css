@@ -385,8 +385,11 @@ html:not(.story) .scroll-cue{display:none}
 .jr3-f .ph{aspect-ratio:4/3;overflow:hidden;border-radius:18px;background:rgba(244,238,234,.08);box-shadow:0 24px 46px -20px rgba(28,24,10,.6);transform:translateZ(0)}
 .jr3-f img{display:block;width:100%;height:100%;object-fit:cover}
 .jr3-f figcaption span{margin-right:16px;opacity:.6}
+/* A short heading, centred above the line */
+.jr3-h{text-align:center;margin-bottom:clamp(22px,3vw,44px)}
 /* Story: the line is held on screen, a little above centre below the header, while the pictures come up from left to right */
 .story .jr3{display:flex;align-items:center;justify-content:center;height:100vh;height:100svh;padding-top:calc(110px + env(safe-area-inset-top,0px));padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+.story .jr3{flex-direction:column}
 .story .jr3-in{margin:0}
 @media (max-width:600px){
   .jr3-in{grid-template-columns:minmax(0,1fr);width:min(100%,420px)}
@@ -394,9 +397,12 @@ html:not(.story) .scroll-cue{display:none}
   .jr3-f .ph{border-radius:14px}
   /* the column of three fits the screen under the header: each picture is sized from the height left over */
   .story .jr3{padding-top:calc(84px + env(safe-area-inset-top,0px));padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}
-  .story .jr3-in{width:min(76vw,calc((100svh - 104px - 3 * 34px - 2 * 14px) / 3 * 4 / 3));gap:14px}
+  .jr3-h{margin-bottom:16px}
+  .story .jr3-in{width:min(76vw,calc((100svh - 104px - 3 * 34px - 2 * 14px - 58px) / 3 * 4 / 3));gap:14px}
 }
 .wordmark-band{position:relative;overflow:hidden;padding-block:clamp(24px,4vw,64px) 0}
+/* lib/home-story.js may give the close extra height on larger screens, so the studio name ends up just below the header at the foot of the page; the words stay at the bottom */
+#closeSec{display:flex;flex-direction:column;justify-content:flex-end}
 .wordmark{--ls:.14;display:block;margin:0;text-align:center;transform:scaleX(1.07);font-family:var(--display);font-weight:300;font-size:9.6vw;line-height:1;letter-spacing:calc(var(--ls) * 1em);text-indent:calc(var(--ls) * 1em);white-space:nowrap;opacity:.2;pointer-events:none;user-select:none;
   -webkit-mask-image:linear-gradient(180deg,#000 35%,transparent 100%);mask-image:linear-gradient(180deg,#000 35%,transparent 100%)}
 @media (max-width:820px){
