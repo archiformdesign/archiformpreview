@@ -379,14 +379,14 @@ html:not(.story) .scroll-cue{display:none}
 /* The journey, between the founder and the studio name: one room as we found it, the inspiration and what we made, side by side
    in one line, never full width. Phones line the three up in a column instead (side by side they would be thumbnails) */
 .jr3{padding-block:clamp(48px,6vw,96px);padding-left:max(var(--side),var(--gut));padding-right:max(var(--side),var(--gutr));color:var(--fg)}
-.jr3-in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.2vw,36px);width:min(100%,1300px);margin-inline:auto;perspective:1400px}
+.jr3-in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.2vw,36px);width:min(100%,1300px);margin-inline:auto}
 .jr3-f{display:flex;flex-direction:column;gap:14px;min-width:0}
 /* Rounded like a pin, with a soft shadow under it; translateZ keeps Safari clipping the corners while the picture inside moves */
 .jr3-f .ph{aspect-ratio:4/3;overflow:hidden;border-radius:18px;background:rgba(244,238,234,.08);box-shadow:0 24px 46px -20px rgba(28,24,10,.6);transform:translateZ(0)}
 .jr3-f img{display:block;width:100%;height:100%;object-fit:cover}
 .jr3-f figcaption span{margin-right:16px;opacity:.6}
 /* A short heading, centred above the line */
-.jr3-h{text-align:center;margin-bottom:clamp(22px,3vw,44px)}
+.jr3-h{position:relative;top:calc(-1 * clamp(8px,2vw,28px));text-align:center;margin-bottom:clamp(22px,3vw,44px)}
 /* Story: the line is held on screen, a little above centre below the header, while the pictures come up from left to right */
 .story .jr3{display:flex;align-items:center;justify-content:center;height:100vh;height:100svh;padding-top:calc(110px + env(safe-area-inset-top,0px));padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
 .story .jr3{flex-direction:column}
