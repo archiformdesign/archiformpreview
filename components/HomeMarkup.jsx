@@ -13,7 +13,7 @@ const JOURNEY = [
   { src: '/m/journey-inspo.jpg', w: 1447, h: 1087, label: 'The inspo', alt: 'Design visualisation of the dressing wall: a curved wardrobe, a long cream chest and dressing table, a round backlit mirror and floating shelves' },
   { src: '/m/pf/joinery-dressing-wall.jpg', w: 1448, h: 1086, label: 'What we made', alt: 'The finished dressing wall: a curved wardrobe with a bronze inlay, a wave-fronted chest of drawers and a backlit arched mirror' },
 ];
-const JOURNEY_SIZES = '(max-width: 820px) 92vw, min(980px, 66vw)';
+const JOURNEY_SIZES = '(max-width: 820px) 84vw, min(980px, 66vw)';
 
 /* Markup for the home page scroll story. Element ids are used by lib/home-story.js. */
 export default function HomeMarkup() {
@@ -54,14 +54,14 @@ export default function HomeMarkup() {
                       <div className="ly haze" style={{'--x': 0, '--z': -.45, '--w': 7, '--y': -.02}}><span /></div>
                       <div className="ly glow" style={{'--x': -.05, '--z': -.04, '--w': 1.7}}><span /></div>
                       {/* An old olive either side of the house, standing just in front of its corners to frame it. lib/home-story.js keeps the diagram labels off them */}
-                      <div className="ly sway olive l" style={{'--x': -.5, '--z': .02, '--w': .4}}><span><img data-src="/m/hol/olive-tree.webp" alt="" width="776" height="860" fetchPriority="low" /></span></div>
-                      <div className="ly sway olive r" style={{'--x': .52, '--z': .02, '--w': .42}}><img data-src="/m/hol/olive-tree.webp" alt="" width="776" height="860" fetchPriority="low" /></div>
-                      <div className="ly hs" id="hsLy" style={{'--x': 0, '--z': 0, '--w': 1.2}}><img data-src="/m/hol/house-v4.webp" alt="" width="2728" height="1000" fetchPriority="low" /><span className="hsh" aria-hidden="true" /><span className="hmk" aria-hidden="true"><i data-k="sun" style={{left: '38.5%', top: '5%'}} /><i data-k="air" style={{left: '59.4%', top: '33%'}} /><i data-k="water" style={{left: '55%', top: '95%'}} /><i data-k="green" style={{left: '33%', top: '93%'}} /><i data-k="people" style={{left: '38%', top: '30%'}} /></span></div>
-                      <div className="ly bed" style={{'--x': -.36, '--z': .08, '--w': .4, '--y': -.008}}><img data-src="/m/hol/grass.webp" alt="" width="1400" height="407" fetchPriority="low" /></div>
-                      <div className="ly bed" style={{'--x': .37, '--z': .06, '--w': .4, '--y': -.008}}><img data-src="/m/hol/shrubs.webp" alt="" width="1400" height="419" fetchPriority="low" /></div>
+                      <div className="ly sway olive l" style={{'--x': -.5, '--z': .02, '--w': .4}}><span><img data-src="/m/hol/olive-tree.webp" data-msrc="/m/hol/olive-tree-m.webp" alt="" width="776" height="860" fetchPriority="low" /></span></div>
+                      <div className="ly sway olive r" style={{'--x': .52, '--z': .02, '--w': .42}}><img data-src="/m/hol/olive-tree.webp" data-msrc="/m/hol/olive-tree-m.webp" alt="" width="776" height="860" fetchPriority="low" /></div>
+                      <div className="ly hs" id="hsLy" style={{'--x': 0, '--z': 0, '--w': 1.2}}><img data-src="/m/hol/house-v4.webp" data-msrc="/m/hol/house-v4-m.webp" alt="" width="2728" height="1000" fetchPriority="low" /><span className="hsh" aria-hidden="true" /><span className="hmk" aria-hidden="true"><i data-k="sun" style={{left: '38.5%', top: '5%'}} /><i data-k="air" style={{left: '59.4%', top: '33%'}} /><i data-k="water" style={{left: '55%', top: '95%'}} /><i data-k="green" style={{left: '33%', top: '93%'}} /><i data-k="people" style={{left: '38%', top: '30%'}} /></span></div>
+                      <div className="ly bed" style={{'--x': -.36, '--z': .08, '--w': .4, '--y': -.008}}><img data-src="/m/hol/grass.webp" data-msrc="/m/hol/grass-m.webp" alt="" width="1400" height="407" fetchPriority="low" /></div>
+                      <div className="ly bed" style={{'--x': .37, '--z': .06, '--w': .4, '--y': -.008}}><img data-src="/m/hol/shrubs.webp" data-msrc="/m/hol/shrubs-m.webp" alt="" width="1400" height="419" fetchPriority="low" /></div>
                       {/* A potted olive either side of the front door, standing at the foot of its pilasters */}
-                      <div className="ly pot" style={{'--x': -.074, '--z': .02, '--w': .04, '--y': .03}}><img data-src="/m/hol/olive-pot.webp" alt="" width="318" height="640" fetchPriority="low" /></div>
-                      <div className="ly pot" style={{'--x': .05, '--z': .02, '--w': .04, '--y': .03}}><img data-src="/m/hol/olive-pot.webp" alt="" width="318" height="640" fetchPriority="low" /></div>
+                      <div className="ly pot" style={{'--x': -.074, '--z': .02, '--w': .04, '--y': .03}}><img data-src="/m/hol/olive-pot.webp" data-msrc="/m/hol/olive-pot-m.webp" alt="" width="318" height="640" fetchPriority="low" /></div>
+                      <div className="ly pot" style={{'--x': .05, '--z': .02, '--w': .04, '--y': .03}}><img data-src="/m/hol/olive-pot.webp" data-msrc="/m/hol/olive-pot-m.webp" alt="" width="318" height="640" fetchPriority="low" /></div>
                       {/* Phones only: the feature cards in a row above the roof (desktop shows the labelled diagram, #holDiag, instead) */}
                       <div className="ly hc" style={{'--x': 0, '--z': .04, '--w': .96, '--y': .62}}>
                         <div className="hcard"><span className="ic"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="7"/><path d="M20 3v6M20 31v6M3 20h6M31 20h6M8 8l4.2 4.2M27.8 27.8 32 32M8 32l4.2-4.2M27.8 12.2 32 8"/></svg></span><span className="nm">Sun &amp;<br />shade</span></div>
