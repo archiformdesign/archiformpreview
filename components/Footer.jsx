@@ -12,16 +12,21 @@ export default function Footer() {
       <span className="c">
         <Image src="/m/mark.webp" alt="" width={192} height={159} sizes="64px" />
       </span>
-      <span>
+      {/* Each contact as a small label above its value, side by side (stacked and centred on phones) */}
+      <div className="foot-links">
         {site.instagram ? (
-          <a href={`https://www.instagram.com/${site.instagram}/`} target="_blank" rel="noopener noreferrer" style={{ marginRight: 20, textDecoration: 'none' }}>
-            Instagram<span className="sr"> (opens in a new tab)</span>
-          </a>
+          <div className="foot-item">
+            <span className="k">Instagram</span>
+            <a href={`https://www.instagram.com/${site.instagram}/`} target="_blank" rel="noopener noreferrer">
+              @{site.instagram}<span className="sr"> on Instagram (opens in a new tab)</span>
+            </a>
+          </div>
         ) : null}
-        <a className="sel" href={`mailto:${site.email}`} style={{ textDecoration: 'none' }}>
-          {site.email}
-        </a>
-      </span>
+        <div className="foot-item">
+          <span className="k">Email</span>
+          <a className="sel" href={`mailto:${site.email}`}>{site.email}</a>
+        </div>
+      </div>
     </footer>
   );
 }
