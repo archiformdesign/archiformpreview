@@ -94,6 +94,9 @@ export const projects = [
       { src: '/m/dresser.jpg', alt: 'Scalloped six-drawer chest in soft lilac grey', wide: true, kind: 'visualisation' },
       { src: '/m/wardrobe-corridor.webp', alt: 'Dressing corridor lined with full-height wardrobes, smoked-glass doors facing a pair in warm taupe', kind: 'visualisation' },
       { src: '/m/panelled-bedroom.jpg', alt: 'Bedroom wall of soft beige upholstered panels behind an upholstered bed, with a glass globe pendant hanging beside it' },
+      { src: '/m/pf/joinery-dressing-wall.jpg', alt: 'The finished dressing wall: a curved wardrobe with a bronze inlay, a wave-fronted chest of drawers and a backlit arched mirror', wide: true },
+      { src: '/m/pf/joinery-console.jpg', alt: 'Sculpted console in a champagne metallic finish, curving down from the wall beside a door' },
+      { src: '/m/pf/joinery-shelves.jpg', alt: 'Rounded floating shelves beside a full-height mirrored sliding wardrobe' },
     ],
   },
   {

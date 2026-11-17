@@ -7,6 +7,13 @@ const featured = getProject('emirates-living-villa');
 // Arched images beside the process steps and the founder teaser share one column: about 80vw on phones, a third of the page on desktop
 const ARCH_SIZES = '(max-width: 820px) 80vw, 34vw';
 const CARD_SIZES = '(max-width: 820px) min(66vw, 360px), 330px';
+// The journey between the founder and the studio name: one room as we found it, the inspiration, and what we made
+const JOURNEY = [
+  { src: '/m/journey-before.webp', w: 999, h: 558, label: 'What we got', alt: 'The bedroom as we found it: a plain white floating TV unit and a small timber desk beneath a wall-mounted TV' },
+  { src: '/m/journey-inspo.jpg', w: 1447, h: 1087, label: 'The inspo', alt: 'Design visualisation of the dressing wall: a curved wardrobe, a long cream chest and dressing table, a round backlit mirror and floating shelves' },
+  { src: '/m/pf/joinery-dressing-wall.jpg', w: 1448, h: 1086, label: 'What we made', alt: 'The finished dressing wall: a curved wardrobe with a bronze inlay, a wave-fronted chest of drawers and a backlit arched mirror' },
+];
+const JOURNEY_SIZES = '(max-width: 820px) 92vw, min(980px, 66vw)';
 
 /* Markup for the home page scroll story. Element ids are used by lib/home-story.js. */
 export default function HomeMarkup() {
@@ -229,6 +236,18 @@ export default function HomeMarkup() {
             <p className="it">“I believe a beautiful space is not just about how it looks, but also about how comfortable and natural it feels to live in.”</p>
             <p className="lbl">ROULA JBOUR — FOUNDER, ARCHIFORM</p>
             <Link className="go" href="/founder" style={{alignSelf: 'flex-start'}}>MEET THE FOUNDER <svg width="26" height="10" aria-hidden="true"><use href="#arrow"/></svg></Link>
+          </div>
+        </section>
+
+        {/* The journey: the three pictures share one frame, held on screen while each fades in over the last (lib/home-story.js) */}
+        <section className="jr3" id="journey" aria-label="One room: what we got, the inspiration and what we made">
+          <div className="jr3-in">
+            {JOURNEY.map((j, i) => (
+              <figure className="jr3-f" key={j.src}>
+                <div className="ph"><Image src={j.src} alt={j.alt} width={j.w} height={j.h} sizes={JOURNEY_SIZES} /></div>
+                <figcaption className="lbl"><span>{'0' + (i + 1)}</span>{j.label}</figcaption>
+              </figure>
+            ))}
           </div>
         </section>
 

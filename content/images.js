@@ -41,6 +41,12 @@ const SIZES = {
   '/m/pf/courtyard-tiles.jpg': [1024, 1536],
   '/m/pf/courtyard-tree.jpg': [1081, 1341],
   '/m/pf/courtyard-wall.jpg': [1024, 1536],
+  '/m/pf/joinery-dressing-wall.jpg': [1448, 1086],
+  '/m/pf/joinery-console.jpg': [1086, 1448],
+  '/m/pf/joinery-shelves.jpg': [1086, 1448],
+  // The home page journey: the room as we found it, the inspiration, then the finished room (joinery-dressing-wall)
+  '/m/journey-before.webp': [999, 558],
+  '/m/journey-inspo.jpg': [1447, 1087],
 };
 
 // Falls back to a 4:3 frame so a missing entry still renders; the CSS crops every photo to its frame anyway
