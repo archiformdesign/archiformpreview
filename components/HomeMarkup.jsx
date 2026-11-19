@@ -178,7 +178,7 @@ export default function HomeMarkup() {
             </div>
             <div className="say" id="sayB" aria-hidden="true">
               <p className="disp">Now the breeze is part of everyday life.</p>
-              <p className="it">Sea air and soft daylight, carried into every room.</p>
+              <p className="it">Soft daylight, carried into every room.</p>
             </div>
 
             <div className="feat" id="feat">
