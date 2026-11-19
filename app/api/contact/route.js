@@ -25,13 +25,22 @@ function prune(map, now) {
   for (const [key, entry] of map) if (entry.expires <= now) map.delete(key);
 }
 
-// Bounded per-instance fallback. Vercel supplies the trusted forwarding header.
-// Other hosts share one bucket until a trusted ingress limiter is configured.
+// The visitor's address as reported by the host's own proxy, never a value the visitor controls.
+function clientIp(req) {
+  if (process.env.VERCEL === '1') return req.headers.get('x-vercel-forwarded-for')?.trim() || '';
+  // Self-hosted (e.g. Hostinger) behind a reverse proxy: the proxy appends the address it actually saw as the
+  // LAST X-Forwarded-For entry. Earlier entries can be forged by the visitor, so they are ignored.
+  const chain = req.headers.get('x-forwarded-for');
+  if (chain) return chain.split(',').at(-1).trim();
+  return req.headers.get('x-real-ip')?.trim() || '';
+}
+
+// Bounded per-instance limiter; requests without a usable address share one bucket.
 function limited(req) {
   const now = Date.now();
   prune(hits, now);
-  const forwarded = process.env.VERCEL === '1' ? req.headers.get('x-vercel-forwarded-for')?.trim() : '';
-  const ip = isIP(forwarded || '') ? forwarded : 'unknown';
+  const forwarded = clientIp(req);
+  const ip = isIP(forwarded) ? forwarded : 'unknown';
   let entry = hits.get(ip);
   if (!entry) {
     if (hits.size >= MAX_ENTRIES) return true;
@@ -79,8 +88,11 @@ export async function POST(req) {
     let sameHost = false;
     try {
       const parsed = new URL(origin);
-      // Next's internal request URL can use localhost behind a reverse proxy.
-      sameHost = ['https:', 'http:'].includes(parsed.protocol) && parsed.host === req.headers.get('host');
+      // Next's internal request URL can use localhost behind a reverse proxy, and some proxies (e.g. Hostinger)
+      // rewrite Host, passing the public host as X-Forwarded-Host. Cross-site pages cannot set either header on a
+      // JSON POST without a CORS preflight, which this route never approves.
+      const hosts = [req.headers.get('host'), ...(req.headers.get('x-forwarded-host') || '').split(',')].map((h) => h?.trim()).filter(Boolean);
+      sameHost = ['https:', 'http:'].includes(parsed.protocol) && hosts.includes(parsed.host);
     } catch {}
     if (!sameHost) return reply({ error: 'Please send your enquiry from the contact page.' }, 403);
   }

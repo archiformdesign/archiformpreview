@@ -11,11 +11,11 @@ const routeSource = await readFile(new URL('app/api/contact/route.js', root), 'u
 const siteSource = await readFile(new URL('content/site.js', root), 'utf8');
 const valid = { name: ' Test Visitor ', email: ' visitor@example.com ', phone: ' +44 (20) 7946-0958 ', type: 'Villa', message: ' A consultation, please. ', company: '', submissionId: crypto.randomUUID() };
 
-async function setup({ configured = true, provider } = {}) {
+async function setup({ configured = true, provider, vercel = true } = {}) {
   const calls = [];
   const context = vm.createContext({
     Request, Response, URL, Buffer, AbortSignal, console: { error() {} },
-    process: { env: configured ? { RESEND_API_KEY: 'test-placeholder', CONTACT_TO_EMAIL: 'studio@example.com', CONTACT_FROM_EMAIL: 'website@example.com', VERCEL: '1' } : {} },
+    process: { env: configured ? { RESEND_API_KEY: 'test-placeholder', CONTACT_TO_EMAIL: 'studio@example.com', CONTACT_FROM_EMAIL: 'website@example.com', ...(vercel ? { VERCEL: '1' } : {}) } : {} },
     fetch: async (...args) => { calls.push(args); return provider ? provider(...args) : Response.json({ id: 'test-message-id' }); },
   });
   const validation = new vm.SourceTextModule(validationSource, { context });
@@ -148,4 +148,19 @@ test('sixth request from same trusted IP is rate limited; arbitrary forwarded he
   const res = await post({}, headers);
   assert.equal(res.status, 429);
   assert.equal(res.headers.get('retry-after'), '600');
+});
+
+test('self-hosted: limit uses the proxy-appended (last) X-Forwarded-For entry, so forged earlier entries do not bypass it', async () => {
+  const { post } = await setup({ vercel: false });
+  for (let i = 0; i < 5; i++) assert.equal((await post({}, { 'x-forwarded-for': `198.51.100.${i}, 203.0.113.9` })).status, 400);
+  assert.equal((await post({}, { 'x-forwarded-for': '198.51.100.99, 203.0.113.9' })).status, 429);
+  assert.equal((await post({}, { 'x-forwarded-for': '203.0.113.10' })).status, 400, 'a different visitor has their own limit');
+});
+
+test('self-hosted: proxy that rewrites Host is accepted via X-Forwarded-Host; other origins are still rejected', async () => {
+  const { post, calls } = await setup({ vercel: false });
+  const proxied = { host: 'localhost:3000', 'x-forwarded-host': 'studio.example', 'x-forwarded-for': '203.0.113.20' };
+  assert.equal((await post(valid, proxied)).status, 200);
+  assert.equal((await post(valid, { ...proxied, origin: 'https://evil.example' })).status, 403);
+  assert.equal(calls.length, 1);
 });
