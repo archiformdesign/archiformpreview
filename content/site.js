@@ -13,8 +13,8 @@ export const site = {
   // Your live domain. Vercel also lets you set NEXT_PUBLIC_SITE_URL instead.
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.archiform.com', // PLACEHOLDER
   email: 'hello@archiformdesign.me',
-  phone: '+971 50 160 5312',
-  whatsapp: '971501605312', // digits only, same number as the phone
+  phone: '+971 50 182 1581',
+  whatsapp: '971501821581', // digits only, same number as the phone
   instagram: 'archiform_design_studio', // handle only; links are built as https://www.instagram.com/<handle>/
   address: {
     city: 'Dubai',
