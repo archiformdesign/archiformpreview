@@ -23,12 +23,15 @@ export default function HomePage() {
         overflow: 'hidden',
       }}
     >
-      <svg
-        viewBox="0 0 300 230"
-        role="img"
-        aria-label="ARCHIFORM Design Studio"
-        style={{ width: '180px', height: 'auto' }}
-      >
+      <img
+  src="/m/logo-dark.webp"
+  alt="ARCHIFORM Design Studio"
+  style={{
+    width: '180px',
+    height: 'auto',
+    objectFit: 'contain',
+  }}
+/>
         <path
           d="M75 125 V65 A55 55 0 0 1 185 65 V125 H160 V65 A30 30 0 0 0 100 65 V125 Z"
           fill="#D9D1BD"
@@ -73,7 +76,7 @@ export default function HomePage() {
         >
           DESIGN STUDIO
         </text>
-      </svg>
+      
     </main>
   );
 }
