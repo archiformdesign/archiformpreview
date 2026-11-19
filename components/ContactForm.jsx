@@ -1,21 +1,10 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import Arrow from './Arrow';
 import { site } from '@/content/site';
 
-const TYPES = ['Villa', 'Family home', 'Apartment', 'Renovation', 'Other'];
-const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-
-// Each message says what is needed, not what went wrong
-function validate(d) {
-  const e = {};
-  if (!d.name) e.name = 'Enter your name.';
-  if (!d.email) e.email = 'Enter your email address.';
-  else if (!emailOk(d.email)) e.email = 'Enter an email address in the format name@example.com.';
-  if (!d.message) e.message = 'Tell us a little about what’s on your mind.';
-  return e;
-}
+import { CONTACT_TYPES as TYPES, normalizeContact, validateContact } from '@/lib/contact-validation';
 
 export default function ContactForm() {
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
@@ -23,8 +12,7 @@ export default function ContactForm() {
   const [fieldErrors, setFieldErrors] = useState({});
   const [firstName, setFirstName] = useState('');
   const sending = useRef(false); // blocks a second submit before the button re-renders as disabled
-  const shownAt = useRef(0);
-  useEffect(() => { shownAt.current = Date.now(); }, [status]);
+  const submissionId = useRef(null);
 
   function fieldProps(name) {
     const bad = Boolean(fieldErrors[name]);
@@ -36,11 +24,9 @@ export default function ContactForm() {
     e.preventDefault();
     if (sending.current) return;
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
-    data.name = (data.name || '').trim();
-    data.email = (data.email || '').trim();
-    data.message = (data.message || '').trim();
-    const errs = validate(data);
+    const raw = Object.fromEntries(new FormData(form).entries());
+    const data = normalizeContact(raw);
+    const errs = validateContact(data);
     setFieldErrors(errs);
     if (Object.keys(errs).length) {
       setStatus('error');
@@ -48,7 +34,9 @@ export default function ContactForm() {
       form.querySelector(`[name="${Object.keys(errs)[0]}"]`)?.focus();
       return;
     }
-    data.elapsed = Date.now() - shownAt.current;
+    submissionId.current ||= crypto.randomUUID();
+    data.submissionId = submissionId.current;
+    data.company = raw.company;
     sending.current = true;
     setStatus('sending');
     setError('');
@@ -64,7 +52,9 @@ export default function ContactForm() {
         throw new Error('We couldn’t reach our server. Check your connection and try again.');
       }
       const json = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(json.error || 'We couldn’t send your enquiry just now. Please try again in a few minutes.');
+      if (json.fieldErrors) setFieldErrors(json.fieldErrors);
+      if (!res.ok || json.ok !== true) throw new Error(json.error || 'We couldn’t send your enquiry just now. Please try again in a few minutes.');
+      submissionId.current = null;
       setFirstName(data.name.split(' ')[0]);
       setStatus('sent');
       form.reset();
@@ -96,12 +86,12 @@ export default function ContactForm() {
         <div className="field"><label htmlFor="f-email">Email</label><input id="f-email" name="email" type="email" autoComplete="email" required maxLength={200} {...fieldProps('email')} />{fieldError('email')}</div>
       </div>
       <div className="two">
-        <div className="field"><label htmlFor="f-phone">Phone number <span className="opt">(optional)</span></label><input id="f-phone" name="phone" type="tel" autoComplete="tel" maxLength={40} /></div>
+        <div className="field"><label htmlFor="f-phone">Phone number</label><input id="f-phone" name="phone" type="tel" autoComplete="tel" required maxLength={40} {...fieldProps('phone')} />{fieldError('phone')}</div>
         <div className="field">
           <label htmlFor="f-type">Property</label>
-          <select id="f-type" name="type" defaultValue={TYPES[0]}>
+          <select id="f-type" name="type" defaultValue={TYPES[0]} required {...fieldProps('type')}>
             {TYPES.map((t) => <option key={t}>{t}</option>)}
-          </select>
+          </select>{fieldError('type')}
         </div>
       </div>
       <div className="field"><label htmlFor="f-msg">What&rsquo;s on your mind</label><textarea id="f-msg" name="message" rows={4} required maxLength={4000} {...fieldProps('message')} />{fieldError('message')}</div>
