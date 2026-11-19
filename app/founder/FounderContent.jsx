@@ -42,7 +42,7 @@ export default function FounderContent() {
         <div className="r">
           <h2 className="h2" id="aboutTitle">A more thoughtful way to <em>create home.</em></h2>
           <div className="cols">
-            <p className="body">We spend so much of our lives within four walls, yet we often focus more on how a space looks than how it makes us feel. At ARCHIFORM, we believe the two should never be separate.</p>
+            <p className="body">We spend so much of our lives within our homes, yet we often focus more on how a space looks than how it makes us feel. At ARCHIFORM, we believe the two should never be separate.</p>
             <p className="body">Based in Dubai, we specialise in interior design, residential renovations and project management, creating homes that are truly lived in, loved and felt.</p>
           </div>
         </div>

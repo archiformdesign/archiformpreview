@@ -67,7 +67,7 @@ export const projects = [
     sub: 'Residential Renovation & Interior Styling',
     type: 'Villa renovation',
     location: 'Dubai, UAE',
-    did: 'Interior Design, Project Management, Custom Cabinetry, and Styling',
+    did: 'Interior Design, Project Management, Custom Cabinetry, and Furnishing',
     cover: '/m/bed.jpg',
     intro: 'A serene retreat shaped by warmth, comfort and quiet elegance.',
     text: 'For this private villa, our vision was to create interiors that feel effortlessly connected, combining soft neutral tones, natural textures and timeless details. From bespoke joinery to carefully considered furnishing and styling, the design brings together sophistication and everyday comfort, creating a home that feels calm, personal and beautifully lived in.',

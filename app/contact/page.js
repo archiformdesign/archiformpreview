@@ -21,7 +21,7 @@ export default function ContactPage() {
           <div className="info">
             <div><span className="lbl">Email</span><a className="sel" href={`mailto:${site.email}`} style={{ textDecoration: 'none' }}>{site.email}</a></div>
             {site.phone ? (
-              <div><span className="lbl">Phone</span><a href={`tel:${site.phone.replace(/\s/g, '')}`} style={{ textDecoration: 'none' }}>{site.phone}</a></div>
+              <div><span className="lbl">Phone</span><a href={`tel:${site.phone.replace(/\s/g, '')}`} style={{ textDecoration: 'none' }}>{site.phone}</a><a href="tel:+971501605312" style={{ textDecoration: 'none' }}>+971 50 160 5312</a></div>
             ) : null}
             {site.whatsapp ? (
               <div>
