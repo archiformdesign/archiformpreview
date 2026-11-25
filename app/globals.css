@@ -107,6 +107,14 @@ body:has(#loader:not(.gone)) #hdr{visibility:hidden;opacity:0}
 .loader .ld-logo{width:clamp(170px,17vw,250px);height:auto;will-change:transform,opacity,filter;animation:ld-in 1.6s cubic-bezier(.215,.61,.355,1) .1s both}
 /* The logo comes into focus from the first paint (GSAP's power3.out is this curve); lib/home-story.js takes over for the exit */
 @keyframes ld-in{from{opacity:0;transform:scale(.94);filter:blur(14px)}}
+/* The page must never stay behind the loader. With scripting off it is never shown. If the scripts have not taken over 12s
+   after it appeared (lib/home-story.js marks <html> with .story the moment it starts), a failed or blocked script is assumed:
+   the loader fades away and the header shows, leaving the static layout every chapter also has for reduced motion */
+@media (scripting:none){.loader{display:none}body:has(#loader:not(.gone)) #hdr{visibility:visible;opacity:1}}
+html:not(.story) .loader:not(.gone){animation:ld-failsafe .8s ease 12s forwards}
+html:not(.story) body:has(#loader:not(.gone)) #hdr{animation:hdr-failsafe .8s ease 12s forwards}
+@keyframes ld-failsafe{to{opacity:0;visibility:hidden}}
+@keyframes hdr-failsafe{to{opacity:1;visibility:visible}}
 
 /* ---------- HOME: the stage (opening, sea, turn, villa) ---------- */
 #home{position:relative}
