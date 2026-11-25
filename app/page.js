@@ -75,5 +75,16 @@ export default async function HomePage() {
     sanityFetch(HOME_PAGE_QUERY),
     sanityFetch(FEATURED_PROJECT_QUERY, { fallbackSlug: home.featuredSlug }),
   ]);
-  return <HomeStory content={homeContent(cms, project)} />;
+  return (
+    <>
+      <HomeStory content={homeContent(cms, project)} />
+      {/* The walk-in film's poster is the largest picture on the first screen (LCP). It is already preloaded (HomeMarkup), but
+          lib/home-story.js attaches it only once the page's scripts have downloaded and run. This runs as soon as the HTML has
+          been read and attaches the same poster the script would choose (portrait cut on phones and portrait tablets, as in
+          lib/home-story.js), which then leaves it in place. */}
+      <script dangerouslySetInnerHTML={{ __html: WALK_POSTER }} />
+    </>
+  );
 }
+
+const WALK_POSTER = `(function(){var v=document.querySelector('#reel video[data-clip="1"]');if(!v||v.getAttribute('poster'))return;var p=(matchMedia('(orientation: portrait) and (max-width: 1100px)').matches&&v.getAttribute('data-mposter'))||v.getAttribute('data-poster');if(p)v.setAttribute('poster',p)})()`;
