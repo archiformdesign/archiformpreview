@@ -37,7 +37,11 @@ export const metadata = {
     images: [ogImage],
   },
   twitter: { card: 'summary_large_image' },
-  icons: { icon: '/m/favicon.png', apple: '/m/favicon.png' },
+  icons: {
+    icon: [{ url: '/favicon.ico', sizes: '48x48' }, { url: '/m/favicon.png', type: 'image/png', sizes: '256x256' }],
+    apple: { url: '/m/apple-touch-icon.png', sizes: '180x180' },
+  },
+  manifest: '/manifest.webmanifest',
 };
 
 export const viewport = {
