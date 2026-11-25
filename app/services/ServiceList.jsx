@@ -1,8 +1,7 @@
 'use client';
 
-import Image from 'next/image';
+import CmsImage from '@/components/CmsImage';
 import { useEffect, useRef, useState } from 'react';
-import { imageSize } from '@/content/images';
 
 /* The services list with its name set letter by letter down both margins. The rails follow the service crossing mid-screen. */
 export default function ServiceList({ services }) {
@@ -18,7 +17,7 @@ export default function ServiceList({ services }) {
     return () => io.disconnect();
   }, []);
 
-  const rail = services[active].rail;
+  const rail = services[active]?.rail;
   return (
     <>
       <div className="vrail l" aria-hidden="true"><span key={rail}>{rail}</span></div>
@@ -29,8 +28,10 @@ export default function ServiceList({ services }) {
             <h2>{s.name}<span className="it">{s.tagline}</span></h2>
             <p>{s.text}</p>
             <div className="ph" style={s.ratio ? { aspectRatio: s.ratio } : undefined}>
-              <Image src={s.image} alt={s.alt} width={imageSize(s.image)[0]} height={imageSize(s.image)[1]} sizes="(max-width: 820px) 92vw, 30vw"
-                style={s.pos ? { objectPosition: s.pos } : undefined} />
+              {s.image ? (
+                <CmsImage src={s.image.src} alt={s.image.alt} width={s.image.width} height={s.image.height} sizes="(max-width: 820px) 92vw, 30vw"
+                  style={s.pos ? { objectPosition: s.pos } : undefined} />
+              ) : null}
             </div>
           </div>
         ))}

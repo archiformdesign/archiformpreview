@@ -11,7 +11,7 @@ export const site = {
   description:
     'Dubai interior design studio for villas and apartments. Interior design, renovation, bespoke joinery and project management, with healthy living built in.',
   // Your live domain. Vercel also lets you set NEXT_PUBLIC_SITE_URL instead.
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.archiform.com', // PLACEHOLDER
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://archiformdesign.me',
   email: 'hello@archiformdesign.me',
   phone: '+971 50 182 1581',
   whatsapp: '971501821581', // digits only, same number as the phone

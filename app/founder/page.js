@@ -1,5 +1,11 @@
+import { notFound } from 'next/navigation';
 import FounderContent from './FounderContent';
 import { pageMeta } from '@/lib/seo';
+import { sanityFetch } from '@/sanity/lib/fetch';
+import { ABOUT_PAGE_QUERY } from '@/sanity/lib/queries';
+
+// Rebuild the page in the background at most once a minute, so Studio edits appear without a redeploy
+export const revalidate = 60;
 
 export const metadata = pageMeta({
   title: 'About Us',
@@ -9,6 +15,8 @@ export const metadata = pageMeta({
   image: { url: '/m/roula.jpg', width: 980, height: 1600, alt: 'Roula Jbour, founder of ARCHIFORM' },
 });
 
-export default function FounderPage() {
-  return <FounderContent />;
+export default async function FounderPage() {
+  const about = await sanityFetch(ABOUT_PAGE_QUERY);
+  if (!about) notFound();
+  return <FounderContent about={about} />;
 }

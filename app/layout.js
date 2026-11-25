@@ -14,9 +14,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SvgSprites from '@/components/SvgSprites';
 import ScrollMemory from '@/components/ScrollMemory';
+import HideOnStudio from '@/components/HideOnStudio';
+import DraftModeTools from '@/components/DraftModeTools';
+import { draftMode } from 'next/headers';
 import { site } from '@/content/site';
 import { services } from '@/content/services';
 import { ogImage } from '@/lib/seo';
+import { jsonLd as toJsonLd } from '@/lib/json-ld';
 
 export const metadata = {
   metadataBase: new URL(site.url),
@@ -71,18 +75,21 @@ const jsonLd = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  // On only for an editor previewing from the Studio; every other visitor gets the cached, published site
+  const { isEnabled: isDraftMode } = await draftMode();
   return (
     <html lang="en">
       <body>
         <a className="skip" href="#content">Skip to content</a>
         <SvgSprites />
         <ScrollMemory />
-        <Header />
+        <HideOnStudio><Header /></HideOnStudio>
         <div id="content" tabIndex={-1} />
         {children}
-        <Footer />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <HideOnStudio><Footer /></HideOnStudio>
+        {isDraftMode ? <DraftModeTools /> : null}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(jsonLd) }} />
       </body>
     </html>
   );

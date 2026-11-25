@@ -1,22 +1,25 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import CmsImage from './CmsImage';
+import EmphasisTail from './EmphasisTail';
 import { roomFilms, featureFilm } from '@/content/media';
-import { getProject } from '@/content/projects';
-
-const featured = getProject('emirates-living-villa');
 // Arched images beside the process steps and the founder teaser share one column: about 80vw on phones, a third of the page on desktop
 const ARCH_SIZES = '(max-width: 820px) 80vw, 34vw';
 const CARD_SIZES = '(max-width: 820px) min(66vw, 360px), 330px';
-// The journey between the founder and the studio name: one room as we found it, the inspiration, and what we made
-const JOURNEY = [
-  { src: '/m/journey-before.webp', w: 999, h: 558, label: 'What we got', alt: 'The bedroom as we found it: a plain white floating TV unit and a small timber desk beneath a wall-mounted TV' },
-  { src: '/m/journey-inspo.jpg', w: 1447, h: 1087, label: 'The inspo', alt: 'Design visualisation of the dressing wall: a curved wardrobe, a long cream chest and dressing table, a round backlit mirror and floating shelves' },
-  { src: '/m/pf/joinery-dressing-wall.jpg', w: 1448, h: 1086, label: 'What we made', alt: 'The finished dressing wall: a curved wardrobe with a bronze inlay, a wave-fronted chest of drawers and a backlit arched mirror' },
-];
 const JOURNEY_SIZES = '(max-width: 600px) 72vw, min(380px, 30vw)';
+// The room panel icons, in panel order (light, airflow, materials, living)
+const PANEL_ICONS = [
+  <svg key="0" className="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" aria-hidden="true"><circle cx="20" cy="20" r="7"/><path d="M20 3v6M20 31v6M3 20h6M31 20h6M8 8l4.2 4.2M27.8 27.8 32 32M8 32l4.2-4.2M27.8 12.2 32 8"/></svg>,
+  <svg key="1" className="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" aria-hidden="true"><path d="M4 14h20a5 5 0 1 0-5-5M4 21h28a5 5 0 1 1-5 5M4 28h12"/></svg>,
+  <svg key="2" className="ic" viewBox="0 0 70 104" fill="none" stroke="currentColor" strokeWidth="1" aria-hidden="true"><use href="#sprig"/></svg>,
+  <svg key="3" className="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" aria-hidden="true"><path d="M5 5h30v30H5zM5 18h11M24 18h11M18 35V24"/><path d="M10 30c4-6 10-3 13-9s7-6 9-8" strokeDasharray="2 3"/></svg>,
+];
+const imgPos = (im) => (im.pos ? { objectPosition: im.pos } : undefined);
 
-/* Markup for the home page scroll story. Element ids are used by lib/home-story.js. */
-export default function HomeMarkup() {
+/* Markup for the home page scroll story. Element ids are used by lib/home-story.js.
+   content: the editable copy and photos (Sanity, with content/home.js as fallback), prepared by app/page.js. */
+export default function HomeMarkup({ content: c }) {
+  const featured = c.featured;
   return (
     <>
       {/* The walk-in film's poster is the largest thing on the first screen, but lib/home-story.js only attaches it once the
@@ -74,9 +77,9 @@ export default function HomeMarkup() {
                   </div>
                 </div>
                 <div className="hol" id="holText">
-                  <p className="lbl">Holistic design</p>
-                  <h2 className="h2">A Home Designed to Work <em>as One.</em></h2>
-                  <p className="body">We design homes that work with their surroundings throughout the day and year. We consider sunlight, fresh air, water, plants, and the people who live there. Every detail is planned together.</p>
+                  <p className="lbl">{c.holisticLabel}</p>
+                  <h2 className="h2"><EmphasisTail text={c.holisticHeading} tail="as One." /></h2>
+                  <p className="body">{c.holisticText}</p>
                 </div>
                 {/* Holistic design as a diagram: each point is labelled clear of the house and the text, with a leader line to the
                     part of the house it describes. lib/home-story.js draws the lines to the markers in the house layer (.hmk). */}
@@ -111,56 +114,41 @@ export default function HomeMarkup() {
             <p className="hh b" id="hhB" aria-hidden="true"><em>Built around</em><br />{' '}better living.</p>
             <div className="hb" id="hb">
               <hr />
-              <p>A home is made up of everyday experiences, and we believe each one deserves careful thought. From the layout of a room to the materials we choose, we design every project with care and purpose. We create beautiful spaces that are comfortable, practical, and support your well-being.</p>
+              <p>{c.heroIntro}</p>
             </div>
-            <ul className="hv lbl" id="hv" aria-label="What we design for"><li>Thoughtful Interiors.</li><li>Healthy Living.</li><li>Timeless Spaces.</li></ul>
+            <ul className="hv lbl" id="hv" aria-label="What we design for">{c.heroValues.map((v, i) => <li key={i}>{v}</li>)}</ul>
 
             <div className="scroll-cue" id="cue" aria-hidden="true"><span>Scroll to enter</span><i /></div>
 
             <div className="say" id="sayH">
-              <p className="lbl">Healthy Living by Design</p>
-              <p className="disp">How You Feel the Moment You Walk In.</p>
-              <p className="it">Designed for the way you live and how you feel.</p>
+              <p className="lbl">{c.walkInLabel}</p>
+              <p className="disp">{c.walkInHeading}</p>
+              <p className="it">{c.walkInText}</p>
             </div>
           </div>
           <div className="hl-panels" id="hlPanels">
-              <div className="pane">
-                <svg className="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" aria-hidden="true"><circle cx="20" cy="20" r="7"/><path d="M20 3v6M20 31v6M3 20h6M31 20h6M8 8l4.2 4.2M27.8 27.8 32 32M8 32l4.2-4.2M27.8 12.2 32 8"/></svg>
-                <h3>Natural Light</h3>
-                <p className="it">Thoughtful use of natural light to create bright, welcoming, and comfortable interiors.</p>
+            {c.panels.map((panel, i) => (
+              <div className="pane" key={i}>
+                {PANEL_ICONS[i]}
+                <h3>{panel.title}</h3>
+                <p className="it">{panel.text}</p>
               </div>
-              <div className="pane">
-                <svg className="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" aria-hidden="true"><path d="M4 14h20a5 5 0 1 0-5-5M4 21h28a5 5 0 1 1-5 5M4 28h12"/></svg>
-                <h3>Comfort &amp; Airflow</h3>
-                <p className="it">Designed for good ventilation, comfortable temperatures, and fresh indoor air.</p>
-              </div>
-              <div className="pane">
-                <svg className="ic" viewBox="0 0 70 104" fill="none" stroke="currentColor" strokeWidth="1" aria-hidden="true"><use href="#sprig"/></svg>
-                <h3>Considered Materials</h3>
-                <p className="it">Beautiful, practical materials chosen for comfort and healthier living.</p>
-              </div>
-              <div className="pane">
-                <svg className="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" aria-hidden="true"><path d="M5 5h30v30H5zM5 18h11M24 18h11M18 35V24"/><path d="M10 30c4-6 10-3 13-9s7-6 9-8" strokeDasharray="2 3"/></svg>
-                <h3>Functional Living</h3>
-                <p className="it">Practical spaces designed around your daily routine, personal needs, and long-term comfort.</p>
-              </div>
+            ))}
           </div>
-          <ol className="hl-index" id="hlIndex" aria-hidden="true"><li className="on">Natural Light</li><li>Comfort &amp; Airflow</li><li>Considered Materials</li><li>Functional Living</li></ol>
+          <ol className="hl-index" id="hlIndex" aria-hidden="true">{c.panels.map((panel, i) => <li key={i} className={i === 0 ? 'on' : undefined}>{panel.title}</li>)}</ol>
         </section>
 
         <section className="dt" id="dt" aria-labelledby="dtTitle">
           <div className="dt-in">
             <div className="dt-head">
-              <p className="lbl rule">The Quieter Details</p>
-              <h2 className="h2" id="dtTitle">What Else Makes a Home <em>Healthy?</em></h2>
-              <p className="body">Beyond natural light, fresh air, and greenery, we consider the small details that make a home healthier. Many of these details are hidden once the home is complete. You experience their benefits in how you sleep, breathe, and feel throughout the day.</p>
+              <p className="lbl rule">{c.detailsLabel}</p>
+              <h2 className="h2" id="dtTitle"><EmphasisTail text={c.detailsHeading} tail="Healthy?" /></h2>
+              <p className="body">{c.detailsText}</p>
             </div>
             <div className="cards" id="cards">
-              <article className="card"><div className="ph"><Image src="/m/materials-board.jpg" alt="Material samples laid out on oak: violet-veined marble, travertine, walnut, bouclé and linen swatches beside kitchen drawings" width={1200} height={1493} sizes={CARD_SIZES} /></div><h3>Natural Materials</h3><p>Organic elements for everyday comfort.</p><ul><li>Clean-air, low-VOC paints.</li><li>Solid wood, stone, and lime plaster.</li><li>Breathable linen, cotton, and wool.</li></ul></article>
-              <article className="card"><div className="ph"><Image src="/m/kitchen-marble.jpg" alt="Kitchen with a full marble backsplash and shelf, oak cabinets and an olive branch in a glass vase" width={809} height={1470} sizes={CARD_SIZES} style={{objectPosition: '50% 40%'}} /></div><h3>Humidity Control</h3><p>Fresh air for a healthier home.</p><ul><li>Natural cross-ventilation and fresh airflow.</li><li>Balanced indoor humidity.</li><li>Dust-minimizing layouts.</li></ul></article>
-              <article className="card"><div className="ph"><Image src="/m/bed-sunlight.jpg" alt="Bedroom with late sun falling across the wall, a palm-print headboard and a small lamp on the bedside table" width={720} height={1280} sizes={CARD_SIZES} style={{objectPosition: '50% 55%'}} /></div><h3>Layered Lighting</h3><p>The right light for every moment.</p><ul><li>Bright light for daily tasks.</li><li>Warm light for evening rest.</li><li>Easy dimming with lamps and switches.</li></ul></article>
-              <article className="card"><div className="ph"><Image src="/m/acoustic.jpg" alt="Reading corner with a slatted timber wall, felt acoustic pendants and a green velvet armchair" width={1200} height={1600} sizes={CARD_SIZES} style={{objectPosition: '50% 45%'}} /></div><h3>Sound Insulation</h3><p>Acoustic comfort for a quieter home.</p><ul><li>Noise-absorbing rugs and drapes.</li><li>Soft-close doors and drawers.</li><li>Sound-dampening finishes.</li></ul></article>
-              <article className="card"><div className="ph"><Image src="/m/pf/joinery-dressing-wall.jpg" alt="The finished dressing wall: a curved wardrobe with a bronze inlay beside a wave-fronted chest of drawers" width={1448} height={1086} sizes={CARD_SIZES} style={{objectPosition: '20% 50%'}} /></div><h3>Considered Storage</h3><p>Effortless organization for calm spaces.</p><ul><li>Tailored daily storage.</li><li>Seamless built-in cabinets.</li><li>Open, clutter-free layouts.</li></ul></article>
+              {c.detailCards.map((card, i) => (
+                <article className="card" key={i}><div className="ph"><CmsImage src={card.image.src} alt={card.image.alt} width={card.image.w} height={card.image.h} sizes={CARD_SIZES} style={imgPos(card.image)} /></div><h3>{card.title}</h3>{card.subtitle ? <p>{card.subtitle}</p> : null}{card.points.length ? <ul>{card.points.map((pt, j) => <li key={j}>{pt}</li>)}</ul> : null}</article>
+              ))}
             </div>
           </div>
         </section>
@@ -184,8 +172,8 @@ export default function HomeMarkup() {
             <div className="feat" id="feat">
               <p className="lbl rule">Featured project</p>
               <h2>{featured.name}</h2>
-              <p className="sub">Interior renovation &amp; styling</p>
-              <p className="body">A complete villa renovation combining warm neutral colours, natural materials, and timeless design. Rooms open to light and fresh air, with bespoke joinery, refined finishes and a calm, layered feel for everyday living.</p>
+              <p className="sub">{c.featuredSubtitle}</p>
+              <p className="body">{c.featuredText}</p>
               <dl>
                 <div><dt>Location</dt><dd>{featured.location}</dd></div>
                 <div><dt>Type</dt><dd>{featured.type}</dd></div>
@@ -196,7 +184,7 @@ export default function HomeMarkup() {
                 <Link className="go" href={`/portfolio/${featured.slug}`}>View the project <svg width="26" height="10" aria-hidden="true"><use href="#arrow"/></svg></Link>
               </div>
             </div>
-            <p className="it feat-q" id="featQ" style={{position: 'absolute', right: 'var(--side)', bottom: 'calc(30px + env(safe-area-inset-bottom,0px))', color: 'var(--paper)', fontSize: 'clamp(22px,2vw,28px)', textShadow: '0 2px 20px rgba(62,49,34,.45)'}}>“A home should feel like you.”</p>
+            <p className="it feat-q" id="featQ" style={{position: 'absolute', right: 'var(--side)', bottom: 'calc(30px + env(safe-area-inset-bottom,0px))', color: 'var(--paper)', fontSize: 'clamp(22px,2vw,28px)', textShadow: '0 2px 20px rgba(62,49,34,.45)'}}>“{c.featuredQuote}”</p>
           </div>
         </section>
 
@@ -208,19 +196,18 @@ export default function HomeMarkup() {
                 <div className="process-frame"><Image src="/m/process-materials.webp" alt="" width={860} height={860} sizes={ARCH_SIZES} /></div>
                 <div className="process-frame"><Image src="/m/kitchen.jpg" alt="" width={1086} height={1448} sizes={ARCH_SIZES} /></div>
                 <div className="process-frame"><Image src="/m/bed.jpg" alt="" width={852} height={1280} sizes={ARCH_SIZES} /></div>
-                <div className="process-founder"><Image className="process-founder-portrait" src="/m/roula.jpg" alt="" width={980} height={1600} sizes={ARCH_SIZES} /></div>
+                <div className="process-founder"><CmsImage className="process-founder-portrait" src={c.founderImage.src} alt="" width={c.founderImage.w} height={c.founderImage.h} sizes={ARCH_SIZES} style={imgPos(c.founderImage)} /></div>
               </div>
             </div>
             <div className="process-copy">
               <div className="process-heading">
-                <h2 className="h2" id="processTitle">From the First Visit to the Final Touch.</h2>
+                <h2 className="h2" id="processTitle">{c.processHeading}</h2>
               </div>
               <div className="process-window">
                 <ol className="process-steps">
-                  <li><span className="lbl">01</span><h3 className="h2">Consultation</h3><p className="body">We visit and listen.</p></li>
-                  <li><span className="lbl">02</span><h3 className="h2">Concept and materials</h3><p className="body">Light and airflow first, then finishes.</p></li>
-                  <li><span className="lbl">03</span><h3 className="h2">Joinery and finishes</h3><p className="body">Thoughtful details, carefully coordinated.</p></li>
-                  <li><span className="lbl">04</span><h3 className="h2">Furnishing and Styling</h3><p className="body">The finishing touches that make it yours.</p></li>
+                  {c.processSteps.map((step, i) => (
+                    <li key={i}><span className="lbl">{String(i + 1).padStart(2, '0')}</span><h3 className="h2">{step.title}</h3><p className="body">{step.text}</p></li>
+                  ))}
                 </ol>
               </div>
             </div>
@@ -228,24 +215,24 @@ export default function HomeMarkup() {
         </section>
 
         <section className="fd" id="fdTeaser" aria-labelledby="fdName">
-          <div className="ph"><Image src="/m/roula.jpg" alt="Roula Jbour, founder of ARCHIFORM, leaning against a white wall" width={980} height={1600} sizes={ARCH_SIZES} /></div>
+          <div className="ph"><CmsImage src={c.founderImage.src} alt={c.founderImage.alt} width={c.founderImage.w} height={c.founderImage.h} sizes={ARCH_SIZES} style={imgPos(c.founderImage)} /></div>
           <div className="tx">
-            <p className="lbl rule">THE PERSON BEHIND THE DESIGN</p>
-            <h2 className="disp" id="fdName">Meet Roula.</h2>
-            <p className="body">With a background in healthcare and interior design, Roula Jbour combines her passion for helping people with her love for creating beautiful spaces.</p>
-            <p className="it">“I believe a beautiful space is not just about how it looks, but also about how comfortable and natural it feels to live in.”</p>
-            <p className="lbl">ROULA JBOUR — FOUNDER, ARCHIFORM</p>
+            <p className="lbl rule">{c.founderLabel}</p>
+            <h2 className="disp" id="fdName">{c.founderHeading}</h2>
+            <p className="body">{c.founderText}</p>
+            <p className="it">“{c.founderQuote}”</p>
+            <p className="lbl">{c.founderSignature}</p>
             <Link className="go" href="/founder" style={{alignSelf: 'flex-start'}}>MEET THE FOUNDER <svg width="26" height="10" aria-hidden="true"><use href="#arrow"/></svg></Link>
           </div>
         </section>
 
         {/* The journey: three pictures in one line, held on screen while they come up from left to right (lib/home-story.js) */}
         <section className="jr3" id="journey" aria-labelledby="jrTitle">
-          <h2 className="h2 jr3-h" id="jrTitle">The <em>Transformation.</em></h2>
+          <h2 className="h2 jr3-h" id="jrTitle"><EmphasisTail text={c.journeyHeading} tail="Transformation." /></h2>
           <div className="jr3-in">
-            {JOURNEY.map((j, i) => (
-              <figure className="jr3-f" key={j.src}>
-                <div className="ph"><Image src={j.src} alt={j.alt} width={j.w} height={j.h} sizes={JOURNEY_SIZES} /></div>
+            {c.journey.map((j, i) => (
+              <figure className="jr3-f" key={i}>
+                <div className="ph"><CmsImage src={j.image.src} alt={j.image.alt} width={j.image.w} height={j.image.h} sizes={JOURNEY_SIZES} style={imgPos(j.image)} /></div>
                 <figcaption className="lbl"><span>{'0' + (i + 1)}</span>{j.label}</figcaption>
               </figure>
             ))}
@@ -257,14 +244,12 @@ export default function HomeMarkup() {
         <section id="closeSec" aria-labelledby="closeTitle">
           <div className="close">
             <div className="a">
-              <p className="lbl rule">LET'S CREATE SOMETHING MEANINGFUL</p>
-              <h2 className="disp" id="closeTitle">A home should feel like you.</h2>
+              <p className="lbl rule">{c.closeLabel}</p>
+              <h2 className="disp" id="closeTitle">{c.closeHeading}</h2>
             </div>
             <div className="b">
-              <p className="body">Not just beautiful in photographs. Not simply impressive when guests arrive.</p>
-              <p className="body">But genuinely comfortable, deeply personal and thoughtfully designed for the life happening within it.</p>
-              <p className="body">Tell us what home means to you. Together, we'll bring that vision to life.</p>
-              <Link className="go talk" href="/contact">LET'S TALK ABOUT YOUR SPACE <svg width="26" height="10" aria-hidden="true"><use href="#arrow"/></svg></Link>
+              {c.closeParagraphs.map((para, i) => <p className="body" key={i}>{para}</p>)}
+              <Link className="go talk" href="/contact">{c.closeCta} <svg width="26" height="10" aria-hidden="true"><use href="#arrow"/></svg></Link>
             </div>
           </div>
         </section>

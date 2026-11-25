@@ -5,19 +5,32 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "node --experimental-vm-modules --test tests/contact.test.mjs"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.3.0",
     "@fontsource/jost": "^5.3.0",
+    "@sanity/client": "^8.17.0",
+    "@sanity/image-url": "^2.2.0",
+    "@sanity/vision": "^6.24.0",
     "gsap": "3.12.5",
     "lenis": "1.1.13",
     "next": "^16.4.6",
+    "next-sanity": "^13.5.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "resend": "^6.39.0"
+    "resend": "^6.39.0",
+    "sanity": "^6.24.0",
+    "styled-components": "^6.6.0"
   },
   "engines": {
     "node": ">=20.9.0"
+  },
+  "overrides": {
+    "@vercel/frameworks": {
+      "js-yaml": "^3.15.2",
+      "smol-toml": "^1.9.1"
+    }
   }
 }
