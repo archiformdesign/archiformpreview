@@ -21,12 +21,15 @@ npm run build
 npm start                      # http://localhost:3000
 ```
 
-## Deploy to Vercel
-1. Push this folder to a GitHub repository.
-2. On vercel.com: **Add New → Project**, import the repo. Framework is detected as Next.js.
-3. In **Settings → Environment Variables** add `RESEND_API_KEY`, `CONTACT_TO_EMAIL`,
-   `CONTACT_FROM_EMAIL` and `NEXT_PUBLIC_SITE_URL` (see `.env.example`), then redeploy.
-4. Add your domain under **Settings → Domains**.
+## Hosting (Hostinger)
+The live site (https://archiformdesign.me) runs on **Hostinger** as a Node.js app (`npm run build`, then `npm start`),
+behind Hostinger's CDN. `vercel.json` is only used if the project is ever deployed to Vercel instead.
+- Environment variables (`RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`, `NEXT_PUBLIC_SITE_URL`,
+  `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET`, optional `SANITY_API_READ_TOKEN`) are set in hPanel for the app.
+- Hostinger serves `public/` itself, so the `/m` and `/v` cache headers in `next.config.mjs` do not reach visitors there;
+  caching, the www redirect and compression are set in hPanel (see `HANDOVER_REPORT.md`, "Host settings").
+- Hostinger converts `.jpg` files in `public/` to WebP on the fly and lets browsers cache them for a year. **To replace a
+  photo or film, give the new file a new name** (e.g. `kitchen-2.jpg`) and update the reference, or returning visitors keep the old one.
 
 ## Contact form (Resend)
 1. Create an API key at resend.com → API Keys.
@@ -66,12 +69,12 @@ each photo's pixel size to `content/images.js`. The page `/portfolio/<slug>` and
   films (the room films `h-light/air/green/flow-*` and `feature-*`) have a keyframe every 4 frames and no B-frames so
   scrubbing stays smooth; keep that if you re-encode them. The 40s walk-in tour (`h-tour-s*`) uses a keyframe every 8
   frames to keep its size down. Films with a portrait `-m` cut use it on phones; the rest crop.
-- Files in `public/m` and `public/v` are cached by browsers for a week, then refreshed in the background, so a file
-  replaced under the same name reaches returning visitors within days. For an instant change, use a new file name.
+- On Hostinger, files in `public/` are cached by its CDN rules, not by `next.config.mjs` (see Hosting above): always use a
+  new file name when replacing an image or film.
 
 ## Project structure
 ```
-app/                 routes: / founder portfolio portfolio/[slug] services contact
+app/                 routes: / founder portfolio portfolio/[slug] services journal contact studio
   api/contact/       server endpoint that emails enquiries via Resend
   layout.js          fonts, header, footer, SEO metadata, structured data
   sitemap.js robots.js not-found.js
@@ -82,11 +85,24 @@ lib/seo.js           page metadata helper (canonical URL + Open Graph tags)
 public/              images (m/), videos (v/), og.jpg share image
 ```
 
+## Checks (performance, QA, accessibility, links)
+```bash
+npm run build                 # the checks run against the production build
+npm run test:e2e              # every page in Chrome, Firefox and WebKit at 9 screen sizes: console errors, failed
+                              # requests, sideways overflow, layout shift (CLS); screenshots in audit/screens/latest/
+npm run check:a11y            # axe accessibility scan (WCAG 2.1 AA), phone and desktop
+npm run audit                 # Lighthouse for every page, phone and desktop, with a summary table (audit/latest/)
+npm run check:links           # broken links and missing files on the live site
+SHOTS=after npm run test:e2e && npm run test:compare   # pixel comparison against audit/screens/before/
+```
+First time on a computer: `npx playwright install firefox webkit` (Chrome tests use the installed Google Chrome).
+See `HANDOVER_REPORT.md` for the results at handover and the guide to adding content without slowing the site.
+
 ## Before launch checklist
 - [ ] Replace placeholders in `content/site.js` (email, phone, WhatsApp, Instagram, address, domain)
-- [ ] Set the four environment variables in Vercel and send a test enquiry
+- [ ] Set the environment variables in Hostinger (hPanel) and send a test enquiry
 - [ ] Replace stock / AI imagery and the ocean clips with licensed or ARCHIFORM-owned media
 - [ ] Replace the AI-generated portfolio images with real project photos, removing `kind: 'visualisation'` from each one replaced
 - [ ] Save the original Pinterest link and the creator's free-to-use terms for each room film in `content/media.js`
-- [ ] Add your domain in Vercel and set `NEXT_PUBLIC_SITE_URL` to it
+- [ ] Point the domain at Hostinger and set `NEXT_PUBLIC_SITE_URL` to it
 - [ ] Submit `https://yourdomain/sitemap.xml` in Google Search Console
