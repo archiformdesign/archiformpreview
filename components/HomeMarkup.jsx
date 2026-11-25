@@ -97,8 +97,9 @@ export default function HomeMarkup({ content: c }) {
               <div className="reelclip" id="reelclip">
                 <div className="reel" id="reel">
                 <video data-clip="0" muted playsInline preload="none" aria-hidden="true"></video>
+                {/* The walk-in film (i 0) gets its poster from an inline script in app/page.js before React hydrates, hence suppressHydrationWarning */}
                 {roomFilms.map((f, i) => (
-                  <video key={f.id} data-clip={i + 1} data-src={f.src} data-msrc={f.msrc} data-poster={f.poster} data-mposter={f.mposter} data-mfps={f.mfps} muted loop={f.loop} playsInline preload={i ? 'none' : 'auto'} aria-label={f.label}></video>
+                  <video key={f.id} data-clip={i + 1} data-src={f.src} data-msrc={f.msrc} data-poster={f.poster} data-mposter={f.mposter} data-mfps={f.mfps} muted loop={f.loop} playsInline preload={i ? 'none' : 'auto'} aria-label={f.label} suppressHydrationWarning={i === 0}></video>
                 ))}
                 </div>
               </div>

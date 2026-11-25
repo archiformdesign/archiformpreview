@@ -1,0 +1,3051 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/mac/Downloads/archiform-next/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/a11y.spec.mjs",
+      "tests/e2e/interactions.spec.mjs",
+      "--reporter=json"
+    ],
+    "configFile": "/Users/mac/Downloads/archiform-next/playwright.config.mjs",
+    "rootDir": "/Users/mac/Downloads/archiform-next/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/mac/Downloads/archiform-next/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "/Users/mac/Downloads/archiform-next/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/mac/Downloads/archiform-next/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/mac/Downloads/archiform-next/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/mac/Downloads/archiform-next/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/mac/Downloads/archiform-next/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/mac/Downloads/archiform-next/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "name": "chrome",
+        "testDir": "/Users/mac/Downloads/archiform-next/tests/e2e",
+        "snapshotDir": "/Users/mac/Downloads/archiform-next/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://localhost:3100",
+          "trace": "retain-on-failure",
+          "browserName": "chromium",
+          "channel": "chrome"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chrome"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/mac/Downloads/archiform-next/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "name": "firefox",
+        "testDir": "/Users/mac/Downloads/archiform-next/tests/e2e",
+        "snapshotDir": "/Users/mac/Downloads/archiform-next/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://localhost:3100",
+          "trace": "retain-on-failure",
+          "browserName": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/mac/Downloads/archiform-next/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "name": "webkit",
+        "testDir": "/Users/mac/Downloads/archiform-next/tests/e2e",
+        "snapshotDir": "/Users/mac/Downloads/archiform-next/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://localhost:3100",
+          "trace": "retain-on-failure",
+          "browserName": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 4,
+    "webServer": {
+      "command": "npx next start -p 3100",
+      "url": "http://localhost:3100",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "a11y.spec.mjs",
+      "file": "a11y.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "a11y mobile",
+          "file": "a11y.spec.mjs",
+          "line": 29,
+          "column": 8,
+          "specs": [
+            {
+              "title": "home",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(1) > .it"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(2) > h3"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(2) > .it"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(3) > h3"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(3) > .it"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(4) > h3"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(4) > .it"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: figure:nth-child(1) > figcaption > span"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: figure:nth-child(2) > figcaption > span"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: figure:nth-child(3) > figcaption > span"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .wordmark"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1168,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:33.210Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(1) > .it"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(2) > h3"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(2) > .it"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(3) > h3"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(3) > .it"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(4) > h3"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(4) > .it"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: figure:nth-child(1) > figcaption > span"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: figure:nth-child(2) > figcaption > span"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: figure:nth-child(3) > figcaption > span"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .wordmark"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 500,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:38.148Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 455,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:41.706Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-92a16c7a6e6f92fb5171",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "founder",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 992,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:33.203Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 562,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:38.225Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 246,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:42.033Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-89b32f602a23d498a8d0",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "portfolio",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 939,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:33.201Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 736,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:38.266Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 243,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:42.430Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-56ec3a9c88f92b28e014",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "project",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 887,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:33.202Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 729,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:38.584Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 302,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:43.003Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-45842169669cc4ae9389",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "services",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 659,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:34.526Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 207,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:39.217Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 179,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:42.384Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-c9325782a0e420a41b34",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "journal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 684,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:34.575Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 164,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:39.429Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 161,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:42.488Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-e85a05647c2fff4fd4f6",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "contact",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 677,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:34.617Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 349,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:39.596Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 158,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:42.575Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-22da3734e4ac7c206558",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "404",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 676,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:34.821Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 213,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:39.603Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 154,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:42.659Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-686b15a3e6cb846a0155",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "a11y desktop",
+          "file": "a11y.spec.mjs",
+          "line": 29,
+          "column": 8,
+          "specs": [
+            {
+              "title": "home",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(1) > h3"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(1) > .it"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(2) > h3"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(2) > .it"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(3) > h3"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(3) > .it"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(4) > h3"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .pane:nth-child(4) > .it"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: figure:nth-child(1) > figcaption > span"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: figure:nth-child(2) > figcaption > span"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: figure:nth-child(3) > figcaption > span"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .wordmark"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1138,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:35.196Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(1) > h3"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(1) > .it"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(2) > h3"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(2) > .it"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(3) > h3"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(3) > .it"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(4) > h3"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .pane:nth-child(4) > .it"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: figure:nth-child(1) > figcaption > span"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: figure:nth-child(2) > figcaption > span"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: figure:nth-child(3) > figcaption > span"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .wordmark"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 319,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:39.822Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 197,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:42.746Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-c27ba23cd0c3f786bfc0",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "founder",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1057,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:35.272Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 185,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:39.952Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 167,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:42.825Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-e12c7733f4c9363c8657",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "portfolio",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 816,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:35.308Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 276,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:40.135Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 162,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:42.923Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-702832804f027e1e82ae",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "project",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 873,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:35.513Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 316,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:40.150Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 171,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:42.955Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-e98f787eb32c4309fe26",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "services",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .vrail.l[aria-hidden=\"true\"] > span"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .vrail.r[aria-hidden=\"true\"] > span"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 707,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:36.139Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .vrail.l[aria-hidden=\"true\"] > span"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .vrail.r[aria-hidden=\"true\"] > span"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 203,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:40.151Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 156,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:43.003Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-a9b0dc83afeb0027da17",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "journal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 929,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:36.340Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 145,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:40.362Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 142,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:43.095Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-b2a7cfbc2de3698ad74f",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "contact",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 712,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:36.345Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 175,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:40.420Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 155,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:43.135Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-4de1d15e631b09262b78",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "404",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                    },
+                    {
+                      "type": "accepted",
+                      "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 650,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:36.398Z",
+                      "annotations": [
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(1) > .k"
+                        },
+                        {
+                          "type": "accepted",
+                          "description": "color-contrast: .foot-item:nth-child(2) > .k"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 168,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:40.476Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "axe runs once, in Chrome",
+                      "location": {
+                        "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                        "line": 33,
+                        "column": 14
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 170,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:43.171Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "axe runs once, in Chrome",
+                          "location": {
+                            "file": "/Users/mac/Downloads/archiform-next/tests/e2e/a11y.spec.mjs",
+                            "line": 33,
+                            "column": 14
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a8169a7a5ec5d54bcf14-df1f6616d21e46b55ce1",
+              "file": "a11y.spec.mjs",
+              "line": 32,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "interactions.spec.mjs",
+      "file": "interactions.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "phone menu",
+          "file": "interactions.spec.mjs",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "opens, locks the page, closes with Escape and the close button, returns focus",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 924,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:36.866Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1354,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:40.519Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1119,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:43.249Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "376aa6a04ce86be42236-e33a6eee4f1e1775d879",
+              "file": "interactions.spec.mjs",
+              "line": 8,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "portfolio filters",
+          "file": "interactions.spec.mjs",
+          "line": 32,
+          "column": 6,
+          "specs": [
+            {
+              "title": "every tab shows its projects, rapid clicks settle on the last one",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1118,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:37.064Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1743,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:40.523Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1617,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:43.307Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "376aa6a04ce86be42236-11f63da45727fe583869",
+              "file": "interactions.spec.mjs",
+              "line": 34,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "contact form",
+          "file": "interactions.spec.mjs",
+          "line": 56,
+          "column": 6,
+          "specs": [
+            {
+              "title": "empty submit shows field errors and focuses the first one",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 388,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:37.078Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 624,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:40.607Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 436,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:43.354Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "376aa6a04ce86be42236-981187fb33e737e633f8",
+              "file": "interactions.spec.mjs",
+              "line": 67,
+              "column": 3
+            },
+            {
+              "title": "a successful send shows the thank-you message (server stubbed)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 418,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:37.295Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 573,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:40.657Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 471,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:43.526Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "376aa6a04ce86be42236-b72eb144d42b48caa720",
+              "file": "interactions.spec.mjs",
+              "line": 78,
+              "column": 3
+            },
+            {
+              "title": "a server error keeps the message and offers the email address (server stubbed)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 387,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:37.474Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 380,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:41.236Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 378,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-25T12:08:43.799Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "376aa6a04ce86be42236-6373bca10fe85533427a",
+              "file": "interactions.spec.mjs",
+              "line": 89,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-25T12:08:32.944Z",
+    "duration": 12013.25,
+    "expected": 31,
+    "skipped": 32,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

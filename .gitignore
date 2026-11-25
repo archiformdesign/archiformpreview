@@ -6,3 +6,9 @@ out
 .env
 .DS_Store
 *.log
+
+# Audit / test output (Lighthouse HTML reports are large; JSON + summaries are kept)
+audit/**/*.html
+/test-results
+/playwright-report
+/audit/screens
