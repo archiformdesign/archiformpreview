@@ -1,6 +1,6 @@
 /**
  * Business details used across the site (header, footer, contact page, SEO, emails).
- * TODO before launch: replace every value marked PLACEHOLDER.
+ * address.street is optional: while empty it is left out of the page and the structured data.
  */
 export const site = {
   name: 'ARCHIFORM Design Studio',
@@ -19,7 +19,7 @@ export const site = {
   address: {
     city: 'Dubai',
     country: 'United Arab Emirates',
-    street: '', // PLACEHOLDER (hidden while empty)
+    street: '', // optional; hidden while empty
   },
   hours: 'By appointment only',
   founder: 'Roula Jbour',
