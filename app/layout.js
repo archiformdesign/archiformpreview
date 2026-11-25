@@ -1,7 +1,6 @@
 // Latin subsets only: the site is in English, and the full sets added ~40 KB of render-blocking @font-face rules.
-import '@fontsource/cormorant-garamond/latin-300.css';
-import '@fontsource/cormorant-garamond/latin-400.css';
-import '@fontsource/cormorant-garamond/latin-500.css';
+// Cormorant 300 (headings), 400 (intros) and 500 (body text) are declared in app/globals.css instead, from public/fonts, so
+// they can be preloaded below (the files are the same as these packages').
 import '@fontsource/cormorant-garamond/latin-300-italic.css';
 import '@fontsource/cormorant-garamond/latin-400-italic.css';
 import '@fontsource/cormorant-garamond/latin-500-italic.css';
@@ -17,7 +16,7 @@ import ScrollMemory from '@/components/ScrollMemory';
 import HideOnStudio from '@/components/HideOnStudio';
 import DraftModeTools from '@/components/DraftModeToolsLazy';
 import { draftMode } from 'next/headers';
-import { preconnect } from 'react-dom';
+import { preconnect, preload } from 'react-dom';
 import { site } from '@/content/site';
 import { services } from '@/content/services';
 import { ogImage } from '@/lib/seo';
@@ -84,6 +83,11 @@ export default async function RootLayout({ children }) {
   // Project, founder and journal photos come from Sanity's image CDN and are often the largest picture on arrival (LCP):
   // opening the connection with the HTML saves the DNS, TCP and TLS round trips before the first one can download
   preconnect('https://cdn.sanity.io');
+  // The three faces nearly every first screen sets text in. Fetched with the HTML rather than after the CSS, they are usually
+  // in before the first paint, so text is not first set in the fallback and then re-wrapped when they swap in (layout shift)
+  preload('/fonts/cormorant-garamond-latin-300-normal-v5.woff2', { as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' });
+  preload('/fonts/cormorant-garamond-latin-400-normal-v5.woff2', { as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' });
+  preload('/fonts/cormorant-garamond-latin-500-normal-v5.woff2', { as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' });
   // On only for an editor previewing from the Studio; every other visitor gets the cached, published site
   const { isEnabled: isDraftMode } = await draftMode();
   return (

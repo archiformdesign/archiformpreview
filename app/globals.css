@@ -1,8 +1,15 @@
 /* Base reset */
 body{margin:0}
-/* Fallback faces sized to match the web fonts (measured in Chrome: Cormorant Garamond runs 96.6% the width of Times New Roman,
-   ascent .92em, descent .29em; Jost 96.2% of Arial, 1.07em, .38em), so text keeps its line breaks and height while the fonts
-   load and nothing below jumps when they swap in (it moved the Services intro up 79px) */
+/* Cormorant Garamond 300, 400 and 500 (the @fontsource files, served from public/fonts so app/layout.js can preload them; a new
+   version of the files gets a new name, e.g. -v6, since Hostinger lets browsers keep files in public/) */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/cormorant-garamond-latin-300-normal-v5.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/cormorant-garamond-latin-400-normal-v5.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/cormorant-garamond-latin-500-normal-v5.woff2') format('woff2')}
+/* Fallback faces sized to match the web fonts (measured in Chrome: Cormorant Garamond runs about 96.6% the width of Times New
+   Roman, ascent .92em, descent .29em; Jost 96.2% of Arial, 1.07em, .38em), so text keeps its line breaks and height while the
+   fonts load and nothing below jumps when they swap in (it moved the Services intro up 79px). Cormorant's is set to 95%: line
+   breaks with the font blocked vs loaded were compared on every page at 19 screen widths, and 95% re-wrapped the fewest
+   headings (the 390px journal heading and the wide-screen Services and project headings no longer jump) */
 @font-face{font-family:'Cormorant Fallback';src:local('Times New Roman'),local('TimesNewRomanPSMT'),local('Times');size-adjust:95%;ascent-override:95.2%;descent-override:30%;line-gap-override:0%}
 @font-face{font-family:'Jost Fallback';src:local('Arial'),local('ArialMT'),local('Helvetica');size-adjust:96.2%;ascent-override:111.2%;descent-override:39.5%;line-gap-override:0%}
 img{max-width:100%}
