@@ -733,3 +733,8 @@ form{display:flex;flex-direction:column;gap:26px}
 .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .note{font-family:var(--label);font-size:12px;letter-spacing:.04em;opacity:.9}
 .hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* Draft Mode banner: only rendered for an editor previewing unpublished changes outside the Studio */
+.draft-bar{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:2147483000;display:flex;align-items:center;gap:14px;padding:8px 8px 8px 16px;background:var(--ink);color:var(--paper);font:400 13px/1.2 var(--label);letter-spacing:.02em;border-radius:999px;box-shadow:0 6px 24px rgba(62,49,34,.3)}
+.draft-bar button{font:inherit;color:var(--ink);background:var(--paper);border:0;border-radius:999px;padding:7px 14px;cursor:pointer}
+.draft-bar button:focus-visible{outline:2px solid var(--paper);outline-offset:2px}

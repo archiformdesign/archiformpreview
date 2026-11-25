@@ -1,7 +1,12 @@
 import PageCta from '@/components/PageCta';
-import { projects } from '@/content/projects';
 import ProjectGrid from './ProjectGrid';
 import { pageMeta } from '@/lib/seo';
+import { sanityFetch } from '@/sanity/lib/fetch';
+import { PROJECTS_QUERY } from '@/sanity/lib/queries';
+import { sanityImage } from '@/sanity/lib/image';
+
+// Rebuild the page in the background at most once a minute, so Studio edits appear without a redeploy
+export const revalidate = 60;
 
 export const metadata = pageMeta({
   title: 'Interior Design Portfolio',
@@ -9,7 +14,17 @@ export const metadata = pageMeta({
   path: '/portfolio',
 });
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  const docs = await sanityFetch(PROJECTS_QUERY);
+  // Resolve image URLs and sizes here on the server, so the client grid receives plain data
+  const projects = docs.map((p) => ({
+    slug: p.slug,
+    category: p.category,
+    name: p.title,
+    sub: p.subtitle,
+    cover: sanityImage(p.coverImage, p.coverAlt ?? p.coverImage?.alt ?? ''),
+  }));
+
   return (
     <>
     <main className="page pf-page" id="portfolio">

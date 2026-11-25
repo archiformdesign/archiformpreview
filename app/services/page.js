@@ -2,8 +2,13 @@ import Link from 'next/link';
 import Faq from './Faq';
 import ServiceList from './ServiceList';
 import PageCta from '@/components/PageCta';
-import { services } from '@/content/services';
 import { pageMeta } from '@/lib/seo';
+import { sanityFetch } from '@/sanity/lib/fetch';
+import { SERVICES_QUERY } from '@/sanity/lib/queries';
+import { imagePosition, sanityImage } from '@/sanity/lib/image';
+
+// Rebuild the page in the background at most once a minute, so Studio edits appear without a redeploy
+export const revalidate = 60;
 
 export const metadata = pageMeta({
   title: 'Interior Design Services in Dubai',
@@ -11,7 +16,19 @@ export const metadata = pageMeta({
   path: '/services',
 });
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const docs = await sanityFetch(SERVICES_QUERY);
+  // Same shape ServiceList has always used, with the image resolved to a Sanity CDN URL and its size
+  const services = docs.map((s) => ({
+    name: s.title,
+    rail: s.rail,
+    tagline: s.tagline,
+    text: s.description,
+    image: sanityImage(s.image),
+    ratio: s.imageRatio,
+    pos: s.imagePosition || imagePosition(s.image),
+  }));
+
   return (
     <>
     <main className="page sv-page" id="services">
