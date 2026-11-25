@@ -1,0 +1,982 @@
+{
+  "links": [
+    {
+      "url": "https://archiformdesign.me/",
+      "status": 200,
+      "state": "OK",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/m/sky-dusk.jpg",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/founder",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": [],
+      "displayText": "About Us"
+    },
+    {
+      "url": "https://archiformdesign.me/m/logo-dark.webp",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/og.jpg",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/m/entry-wide-v6.webp",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/m/favicon.png",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/m/entry-wide-v5.webp",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/portfolio",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": [],
+      "displayText": "Portfolio"
+    },
+    {
+      "url": "https://archiformdesign.me/v/h-tour-m5.jpg",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/05okff2d-jci4.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/2dyzy-alrmxj7.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/v/h-tour-s2.jpg",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/10-zghlkag-a2.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/1ow81scycwwq_.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/0v3rx79n8a0c7.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/2btbqou-i852g.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=128&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/1ic00tsljk_qf.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/2ybxh5erfndyh.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/1zjj3jkxx4nbm.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/3j00qf862rafm.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/0cz1d0mv5g_q7.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=96&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/1qik17nu4bd30.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/0zjhus025nqhp.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/portfolio/emirates-living-villa",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": [],
+      "displayText": "View the project"
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/1j-9xxhjihm-y.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=48&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/17fms_jsrb1ne.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/services",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": [],
+      "displayText": "Services"
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/0-qjf3jkqxs_c.css",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/262uxxszab7p8.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=32&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/journal",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": [],
+      "displayText": "Journal"
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=256&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/turbopack-077hmtqrhcoji.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/30q10su-moklk.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/contact",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": [],
+      "displayText": "Contact"
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/0c-dy73a9j7gc.css",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/m/logo-dark.png",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/m/roula.jpg",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/founder",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=384&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=3840&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-visit.webp&w=256&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=64&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/37iqnemg7s-h5.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=640&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=48&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=1080&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=828&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=32&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/1zyokefv3cw4v.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fbed.jpg&w=640&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=96&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=640&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=750&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=256&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fkitchen.jpg&w=828&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=1920&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=2048&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=2048&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=1200&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=128&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=1920&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=64&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=750&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fbed.jpg&w=256&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=1080&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fkitchen.jpg&w=384&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fbed.jpg&w=3840&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=384&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-dark.webp&w=828&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-visit.webp&w=1200&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-visit.webp&w=640&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-visit.webp&w=2048&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=3840&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fkitchen.jpg&w=1920&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-materials.webp&w=750&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fkitchen.jpg&w=1080&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-materials.webp&w=384&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-materials.webp&w=3840&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-materials.webp&w=1080&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fkitchen.jpg&w=640&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Flogo-light.webp&w=1200&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fkitchen.jpg&w=1200&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-materials.webp&w=256&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-visit.webp&w=3840&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-visit.webp&w=1080&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-visit.webp&w=1920&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fkitchen.jpg&w=256&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fkitchen.jpg&w=2048&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fbed.jpg&w=384&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-materials.webp&w=2048&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-materials.webp&w=640&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fkitchen.jpg&w=750&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-visit.webp&w=384&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fkitchen.jpg&w=3840&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-materials.webp&w=1200&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-materials.webp&w=828&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-visit.webp&w=750&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-visit.webp&w=828&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/v/journal-press-2.jpg",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/journal",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/v/journal-press-2.mp4",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/journal",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/m/she-means-business-p14.jpg",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/journal",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=3840&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fbed.jpg&w=1080&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fprocess-materials.webp&w=1920&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fbed.jpg&w=750&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fbed.jpg&w=1200&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=48&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=32&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=256&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=64&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=640&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/1-x5jfkvm15fa.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/founder",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/1ykpsi7rd353x.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/journal",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/3kmoppl8109pq.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/contact",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=1080&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=128&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fbed.jpg&w=828&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=96&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fbed.jpg&w=2048&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=384&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=1200&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=750&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/1ea_b2urjh16c.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/portfolio",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=828&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/portfolio/dining-room",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/portfolio",
+      "failureDetails": [],
+      "displayText": "Dining RoomA soft, tonal room for long dinners"
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=2048&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/portfolio/kitchen-entrance",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/portfolio",
+      "failureDetails": [],
+      "displayText": "Kitchen & EntranceChequered floor, classic cabinetry & oak"
+    },
+    {
+      "url": "https://archiformdesign.me/portfolio/mediterranean-courtyard",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/portfolio",
+      "failureDetails": [],
+      "displayText": "Mediterranean CourtyardTerracotta, hand-painted tiles and dappled shade"
+    },
+    {
+      "url": "https://archiformdesign.me/portfolio/bespoke-joinery",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/portfolio",
+      "failureDetails": [],
+      "displayText": "Bespoke JoineryFurniture and joinery designed in the studio and made to measure"
+    },
+    {
+      "url": "https://archiformdesign.me/_next/static/chunks/2ne5rk_pipjnk.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/services",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/portfolio/stone-bathrooms",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/portfolio",
+      "failureDetails": [],
+      "displayText": "Stone BathroomsWarm, spa-like bathrooms in limestone-look stone and oak"
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fmark.webp&w=1920&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://archiformdesign.me/portfolio/garden-terrace",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/portfolio",
+      "failureDetails": [],
+      "displayText": "Outdoor SpacesAn outdoor room under a lit pergola"
+    },
+    {
+      "url": "https://archiformdesign.me/_next/image?url=%2Fm%2Fbed.jpg&w=1920&q=75",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://archiformdesign.me/",
+      "failureDetails": []
+    }
+  ],
+  "passed": true
+}
