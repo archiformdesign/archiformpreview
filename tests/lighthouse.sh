@@ -16,8 +16,12 @@ for p in / /founder /portfolio /services /journal /contact /portfolio/emirates-l
   name=$(echo "$p" | sed 's#^/##; s#/#_#g'); [ -z "$name" ] && name=home
   for ff in mobile desktop; do
     if [ $ff = desktop ]; then preset="--preset=desktop"; else preset=""; fi
-    npx --yes lighthouse@13.6.0 "$BASE$p" $preset --form-factor=$ff --output=json --output=html \
-      --output-path="$OUT/lh-$name-$ff" --chrome-flags="--headless=new" --quiet >/dev/null 2>&1
+    rm -f "$OUT/lh-$name-$ff.report.json"
+    for attempt in 1 2; do   # Chrome occasionally fails to start a run; one retry
+      npx --yes lighthouse@13.6.0 "$BASE$p" $preset --form-factor=$ff --output=json --output=html \
+        --output-path="$OUT/lh-$name-$ff" --chrome-flags="--headless=new" --quiet >/dev/null 2>&1
+      [ -s "$OUT/lh-$name-$ff.report.json" ] && break
+    done
     echo "lighthouse: $name $ff"
   done
 done
