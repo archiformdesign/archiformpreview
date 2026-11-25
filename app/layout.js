@@ -15,8 +15,9 @@ import Footer from '@/components/Footer';
 import SvgSprites from '@/components/SvgSprites';
 import ScrollMemory from '@/components/ScrollMemory';
 import HideOnStudio from '@/components/HideOnStudio';
-import DraftModeTools from '@/components/DraftModeTools';
+import DraftModeTools from '@/components/DraftModeToolsLazy';
 import { draftMode } from 'next/headers';
+import { preconnect } from 'react-dom';
 import { site } from '@/content/site';
 import { services } from '@/content/services';
 import { ogImage } from '@/lib/seo';
@@ -76,6 +77,9 @@ const jsonLd = {
 };
 
 export default async function RootLayout({ children }) {
+  // Project, founder and journal photos come from Sanity's image CDN and are often the largest picture on arrival (LCP):
+  // opening the connection with the HTML saves the DNS, TCP and TLS round trips before the first one can download
+  preconnect('https://cdn.sanity.io');
   // On only for an editor previewing from the Studio; every other visitor gets the cached, published site
   const { isEnabled: isDraftMode } = await draftMode();
   return (
