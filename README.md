@@ -82,7 +82,7 @@ components/          Header, Footer, HomeStory (+ HomeMarkup), ContactForm, SvgS
 content/             site details, projects, services, image sizes, film registry
 lib/home-story.js    the home page scroll story (starts on mount, fully cleaned up on leave)
 lib/seo.js           page metadata helper (canonical URL + Open Graph tags)
-public/              images (m/), videos (v/), og.jpg share image
+public/              images (m/), videos (v/), fonts/, og-archiform.jpg link preview image
 ```
 
 ## Checks (performance, QA, accessibility, links)

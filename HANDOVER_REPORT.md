@@ -150,9 +150,11 @@ Suggested message to Hostinger support:
     Plausible or Vercel-style cookieless analytics avoid a cookie banner; Google Analytics 4 needs consent handling.
 11. **No Privacy Policy / Terms pages.** The contact form collects name, email and phone, so a privacy notice is advisable
     (UAE PDPL). Needs text from the studio; the footer can then link to it.
-12. **Public GitHub repository.** `archiformdesign/archiformpreview` is public and contains `Dubai ROULA.docx` and ~210 MB of raw
-    source films (repo 816 MB, which also slows deploys). Recommendation: make the repository private. Removing the files from
-    history needs a force-push, which this round was not allowed to do.
+12. **Public GitHub repository.** `archiformdesign/archiformpreview` is public. `Dubai ROULA.docx`, the ~235 MB of raw source films
+    (`MyMovie.mp4`, `mymovie2.mp4`, `compressed/`, `videos folder/`) and the AI prompt documents were removed from the project
+    on 25 Nov 2026, but they remain in the git history (repo ~816 MB), where anyone can still download them. Recommendation: make
+    the repository private; removing them from history as well needs a force-push. The studio should keep its own copy of the
+    original films (they are the masters for any re-encode; `content/media.js` records which file each web cut came from).
 13. **One remaining font re-wrap:** if Cormorant arrives after the first paint, one Contact paragraph at 360 px and a few headings at
     375–384 px still re-wrap (no single fallback size matches every width). The preload makes this rare.
 14. **Process → founder hand-off** animates the picture's width/height while scrolling (a layout per frame). It runs smoothly in

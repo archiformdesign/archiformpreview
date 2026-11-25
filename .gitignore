@@ -12,3 +12,10 @@ audit/**/*.html
 /test-results
 /playwright-report
 /audit/screens
+
+# Source media and documents stay out of the repository (keep originals elsewhere; the site uses public/)
+/*.mp4
+/*.mov
+/*.docx
+/compressed/
+/videos folder/
